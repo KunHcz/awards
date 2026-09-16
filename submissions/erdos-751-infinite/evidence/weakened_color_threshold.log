@@ -1,0 +1,22 @@
+$NEGATIVE_FIXTURE/weakened_color_threshold.lean:73:36: error: Application type mismatch: The argument
+  hχ
+has type
+  3 ≤ G.chromaticNumber
+but is expected to have type
+  4 ≤ G.chromaticNumber
+in the application
+  le_trans hχ
+$NEGATIVE_FIXTURE/weakened_color_threshold.lean:89:62: error: unsolved goals
+V : Type u
+G : SimpleGraph V
+hχ : G.chromaticNumber = 4
+⊢ 3 ≤ 4
+'Erdos751.Main.erdos_751_strong' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos751Extension.colorable_of_finite_subgraphs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos751Extension.finite_noncolorable_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos751Extension.lift_cycle' depends on axioms: [propext, Quot.sound]
+'Erdos751Extension.close_cycles_of_not_three_colorable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos751Extension.close_cycle_lengths' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Erdos751Extension.not_three_separated' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Erdos751Extension.answer' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Erdos751Extension.answer_with_girth' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

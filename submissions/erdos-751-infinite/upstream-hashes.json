@@ -1,0 +1,38 @@
+{
+  "Erdos751/Basic.lean": {
+    "sha256": "1d57d1b5f6a6c7df585358d8aaa91758b0309d22562891e973e11238d5321a17",
+    "bytes": 9354
+  },
+  "Erdos751/BV.lean": {
+    "sha256": "4cf969eabc1329215c2ac6678157bc85ef92d4ac433ae8ff7274107c82e2a4f1",
+    "bytes": 97845
+  },
+  "Erdos751/BridgeLemmas.lean": {
+    "sha256": "f263779d107ad4e2357a4d5754c2e6af2b15aaccd790ec7be95e91ed2fd8dee6",
+    "bytes": 7697
+  },
+  "Erdos751/Critical.lean": {
+    "sha256": "b9cc8763278d716b453bb291a7b0c28464b76d4148f9862069bf7d761bbb1c3e",
+    "bytes": 31938
+  },
+  "Erdos751/Main.lean": {
+    "sha256": "eaba088cc88f713bfb1ee6e06272de5500236d68281d581636956b81449e6c50",
+    "bytes": 2478
+  },
+  "Erdos751/WalkLemmas.lean": {
+    "sha256": "6e4dbb984d37241fb709e10ce52c8a23a9dcc1e0f8524da1e4074f866c6e1898",
+    "bytes": 1673
+  },
+  "Erdos751.lean": {
+    "sha256": "704d9879c6815958a7148356b75dd53fc230c8d5423058d88d682a9d62a444fc",
+    "bytes": 160
+  },
+  "lakefile.toml": {
+    "sha256": "a7de8e53ff6aaad08895c5c34b01e0a13dfad8bf6b15f50744de9a2ce0dfb32a",
+    "bytes": 250
+  },
+  "lean-toolchain": {
+    "sha256": "49e4916cabcb6ed4706f31d91b653d33ce83e12dc1e1c43bb560f11e4249f37d",
+    "bytes": 25
+  }
+}

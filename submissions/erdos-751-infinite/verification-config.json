@@ -1,0 +1,30 @@
+{
+  "module": "Erdos751Extension",
+  "namespace": "Erdos751Extension",
+  "problem_id": "Erdos 751 (catalog inclusion requested)",
+  "scope": "Complete finite-to-arbitrary-vertex extension, conditional on no new hypotheses; existing finite proof separately attributed",
+  "imports": [
+    "Erdos751.Main",
+    "Mathlib.Combinatorics.SimpleGraph.Finsubgraph"
+  ],
+  "theorems": [
+    "colorable_of_finite_subgraphs",
+    "finite_noncolorable_witness",
+    "lift_cycle",
+    "close_cycles_of_not_three_colorable",
+    "close_cycle_lengths",
+    "not_three_separated",
+    "answer",
+    "answer_with_girth"
+  ],
+  "mutations": {
+    "wrong_zero_gap": [
+      "m < n ∧ n ≤ m + 2",
+      "m < n ∧ n ≤ m + 0"
+    ],
+    "weakened_color_threshold": [
+      "(hχ : (4 : ℕ∞) ≤ G.chromaticNumber)",
+      "(hχ : (3 : ℕ∞) ≤ G.chromaticNumber)"
+    ]
+  }
+}

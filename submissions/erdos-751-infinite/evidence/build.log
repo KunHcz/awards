@@ -1,0 +1,17 @@
+✔ [3106/3113] Built Erdos751.Basic (8.4s)
+✔ [3107/3113] Built Erdos751.WalkLemmas (1.7s)
+✔ [3108/3113] Built Erdos751.BridgeLemmas (2.1s)
+✔ [3109/3113] Built Erdos751.BV (5.4s)
+✔ [3110/3113] Built Erdos751.Critical (26s)
+✔ [3111/3113] Built Erdos751.Main (1.7s)
+ℹ [3112/3113] Built Erdos751Extension (2.7s)
+info: Erdos751Extension.lean:111:0: 'Erdos751.Main.erdos_751_strong' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos751Extension.lean:112:0: 'Erdos751Extension.colorable_of_finite_subgraphs' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos751Extension.lean:113:0: 'Erdos751Extension.finite_noncolorable_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos751Extension.lean:114:0: 'Erdos751Extension.lift_cycle' depends on axioms: [propext, Quot.sound]
+info: Erdos751Extension.lean:115:0: 'Erdos751Extension.close_cycles_of_not_three_colorable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos751Extension.lean:116:0: 'Erdos751Extension.close_cycle_lengths' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos751Extension.lean:117:0: 'Erdos751Extension.not_three_separated' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos751Extension.lean:118:0: 'Erdos751Extension.answer' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos751Extension.lean:119:0: 'Erdos751Extension.answer_with_girth' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3113 jobs).
