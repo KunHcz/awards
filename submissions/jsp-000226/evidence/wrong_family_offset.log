@@ -1,0 +1,23 @@
+$NEGATIVE_FIXTURE/wrong_family_offset.lean:38:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  a ≥ 0
+where
+ a := ↑(2 ^ (m + 1) - (m + 3))
+$NEGATIVE_FIXTURE/wrong_family_offset.lean:44:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 0
+  a ≥ 0
+  a - b ≤ 2
+  2*a - b ≥ 3
+where
+ a := ↑2 ^ m
+ b := ↑(2 ^ (m + 1) - (m + 3))
+'JustinSunPrize.JSP000226.block_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000226.family_bound' depends on axioms: [propext, sorryAx]
+'JustinSunPrize.JSP000226.family_balance' depends on axioms: [propext, sorryAx]
+'JustinSunPrize.JSP000226.family_identity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000226.family_representable' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000226.infinitely_many_representable' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

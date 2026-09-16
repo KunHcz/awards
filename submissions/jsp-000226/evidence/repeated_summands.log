@@ -1,0 +1,27 @@
+$NEGATIVE_FIXTURE/repeated_summands.lean:62:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 1
+  b ≥ 0
+  a ≥ 2
+  a - c ≥ 1
+  a - d ≥ 1
+where
+ a := ↑m
+ b := ↑(family m)
+ c := ↑↑j
+ d := ↑↑i
+$NEGATIVE_FIXTURE/repeated_summands.lean:66:4: error: 'change' tactic failed, pattern
+  ↑(family m) / 2 ^ family m = ∑ i, ↑(family m + ↑i + 1) / 2 ^ (family m + ↑i + 1)
+is not definitionally equal to target
+  ↑(family m) / 2 ^ family m = ∑ i, ↑((fun x => family m + 1) i) / 2 ^ (fun x => family m + 1) i
+'JustinSunPrize.JSP000226.block_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000226.family_bound' depends on axioms: [propext, Quot.sound]
+'JustinSunPrize.JSP000226.family_balance' depends on axioms: [propext, Quot.sound]
+'JustinSunPrize.JSP000226.family_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000226.family_representable' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000226.infinitely_many_representable' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

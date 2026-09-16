@@ -1,0 +1,27 @@
+{
+  "module": "JSP226",
+  "namespace": "JustinSunPrize.JSP000226",
+  "problem_id": "JSP-000226",
+  "scope": "Erdos 261(i): infinitely many distinct positive finite dyadic decompositions; not all n and not the infinite-series questions",
+  "imports": [
+    "Mathlib.Tactic"
+  ],
+  "theorems": [
+    "block_sum",
+    "family_bound",
+    "family_balance",
+    "family_identity",
+    "family_representable",
+    "infinitely_many_representable"
+  ],
+  "mutations": {
+    "wrong_family_offset": [
+      "2 ^ (m + 1) - m - 2",
+      "2 ^ (m + 1) - m - 3"
+    ],
+    "repeated_summands": [
+      "fun i => family m + i.val + 1",
+      "fun _ => family m + 1"
+    ]
+  }
+}

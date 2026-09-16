@@ -1,0 +1,10 @@
+{
+  "checked_at_utc": "2026-09-16T13:05:25.640911+00:00",
+  "official_pr_count": 36,
+  "official_pr_query": "state=all,per_page=100",
+  "problem_id": "JSP-000226",
+  "erdos_problem": 261,
+  "matches": [],
+  "priority_established": false,
+  "limitations": "Public PR metadata and source checks; indexing and unpublished work not covered."
+}

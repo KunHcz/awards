@@ -1,0 +1,8 @@
+ℹ [3092/3093] Built JSP226 (10s)
+info: JSP226.lean:82:0: 'JustinSunPrize.JSP000226.block_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP226.lean:83:0: 'JustinSunPrize.JSP000226.family_bound' depends on axioms: [propext, Quot.sound]
+info: JSP226.lean:84:0: 'JustinSunPrize.JSP000226.family_balance' depends on axioms: [propext, Quot.sound]
+info: JSP226.lean:85:0: 'JustinSunPrize.JSP000226.family_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP226.lean:86:0: 'JustinSunPrize.JSP000226.family_representable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP226.lean:87:0: 'JustinSunPrize.JSP000226.infinitely_many_representable' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3093 jobs).

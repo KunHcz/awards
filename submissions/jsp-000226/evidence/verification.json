@@ -1,0 +1,106 @@
+{
+  "status": "LOCAL_VERIFIED_NOT_OFFICIALLY_REVIEWED",
+  "problem_id": "JSP-000226",
+  "scope": "Erdos 261(i): infinitely many distinct positive finite dyadic decompositions; not all n and not the infinite-series questions",
+  "checked_at_utc": "2026-09-16T12:50:23.625301+00:00",
+  "completed_at_utc": "2026-09-16T12:54:36.178223+00:00",
+  "lean_version": "Lean (version 4.34.0, arm64-apple-darwin24.6.0, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)",
+  "dependency_pins": {
+    "mathlib": "5ed2965256430c3649e86755f9576b54eca72435",
+    "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+    "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+    "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+    "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+    "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+    "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+    "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+    "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+  },
+  "clean_project_rebuild": true,
+  "full_fresh_kernel_replay": true,
+  "independent_checker_implementation": false,
+  "independent_human_review": false,
+  "full_dependency_source_rebuild": false,
+  "audited_theorem_count": 6,
+  "axioms": {
+    "JustinSunPrize.JSP000226.block_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JustinSunPrize.JSP000226.family_bound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "JustinSunPrize.JSP000226.family_balance": [
+      "propext",
+      "Quot.sound"
+    ],
+    "JustinSunPrize.JSP000226.family_identity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JustinSunPrize.JSP000226.family_representable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JustinSunPrize.JSP000226.infinitely_many_representable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "negative_controls": {
+    "false_arithmetic": {
+      "exit_code": 1,
+      "status": "REJECTED_BY_LEAN"
+    },
+    "placeholder": {
+      "exit_code": 0,
+      "status": "REJECTED_BY_AXIOM_AUDIT"
+    },
+    "custom_axiom": {
+      "exit_code": 0,
+      "status": "REJECTED_BY_AXIOM_AUDIT"
+    },
+    "wrong_family_offset": {
+      "exit_code": 1,
+      "status": "REJECTED_BY_LEAN"
+    },
+    "repeated_summands": {
+      "exit_code": 1,
+      "status": "REJECTED_BY_LEAN"
+    }
+  },
+  "files": {
+    "JSP226.lean": {
+      "sha256": "bfc780129a803c9c3328a0012bae0248b9992dbe7cff09f9b7df928b8e6fe4f9",
+      "bytes": 3245
+    },
+    "lean-toolchain": {
+      "sha256": "8733782dc070a99b312039cda424f601b80f3be6f6f512627da5ba25adc27632",
+      "bytes": 25
+    },
+    "lakefile.toml": {
+      "sha256": "0c0f05666304f8bb9f624c73ad0cc14e476a24d74283c047cc9e9e30656d0665",
+      "bytes": 232
+    },
+    "lake-manifest.json": {
+      "sha256": "1fc8a3e02a87adea01a3cc8c25ab9e789e2798ee2914f14b80144c730e021006",
+      "bytes": 3540
+    },
+    "verification-config.json": {
+      "sha256": "9ccda4502e3250a979253c1d15673726a30ff60800e4fc5abb1e415382224588",
+      "bytes": 663
+    },
+    "scripts/verify.py": {
+      "sha256": "6d5516f38390852532a94b0407ea732a493faeb3b9d321c48de8c5cb19a6a9e1",
+      "bytes": 8513
+    }
+  },
+  "novel_mathematical_discovery": false,
+  "formalization_priority": "NOT_ESTABLISHED",
+  "award_eligibility": "UNDETERMINED"
+}

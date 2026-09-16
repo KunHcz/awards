@@ -1,0 +1,6 @@
+'JustinSunPrize.JSP000226.block_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000226.family_bound' depends on axioms: [propext, Quot.sound]
+'JustinSunPrize.JSP000226.family_balance' depends on axioms: [propext, Quot.sound]
+'JustinSunPrize.JSP000226.family_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000226.family_representable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000226.infinitely_many_representable' depends on axioms: [propext, Classical.choice, Quot.sound]
