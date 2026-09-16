@@ -1,0 +1,6 @@
+.lake/
+.venv/
+__pycache__/
+verification-output/
+*.olean
+*.ilean

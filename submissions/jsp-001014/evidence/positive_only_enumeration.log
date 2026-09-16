@@ -1,0 +1,25 @@
+$NEGATIVE_FIXTURE/positive_only_enumeration.lean:53:16: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  a ≥ 0
+where
+ a := ↑n
+'JustinSunPrize.JSP001014.IntegerShifts.obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP001014.IntegerShifts.shift_ne_zero' depends on axioms: [propext, Quot.sound]
+'JustinSunPrize.JSP001014.IntegerShifts.shift_even' depends on axioms: [propext, Quot.sound]
+'JustinSunPrize.JSP001014.IntegerShifts.shift_odd' depends on axioms: [propext, sorryAx, Quot.sound]
+'JustinSunPrize.JSP001014.IntegerShifts.shift_covers' depends on axioms: [propext, sorryAx, Quot.sound]
+'JustinSunPrize.JSP001014.IntegerShifts.next_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP001014.IntegerShifts.sequence_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP001014.IntegerShifts.sequence_strictMono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP001014.IntegerShifts.squarefree_shift_iff' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'JustinSunPrize.JSP001014.IntegerShifts.prime_shift_iff' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'JustinSunPrize.JSP001014.IntegerShifts.simultaneous_counterexample' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

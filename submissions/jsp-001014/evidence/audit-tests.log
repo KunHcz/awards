@@ -1,0 +1,13 @@
+test_axiom_free (test_verify.AuditTests.test_axiom_free) ... ok
+test_duplicate_report (test_verify.AuditTests.test_duplicate_report) ... ok
+test_missing_report (test_verify.AuditTests.test_missing_report) ... ok
+test_source_guard (test_verify.AuditTests.test_source_guard) ... ok
+test_standard_axioms (test_verify.AuditTests.test_standard_axioms) ... ok
+test_unapproved_axioms (test_verify.AuditTests.test_unapproved_axioms) ... ok
+test_unapproved_import (test_verify.AuditTests.test_unapproved_import) ... ok
+test_unexpected_name (test_verify.AuditTests.test_unexpected_name) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.000s
+
+OK
