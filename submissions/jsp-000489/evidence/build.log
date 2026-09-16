@@ -1,0 +1,10 @@
+ℹ [3092/3093] Built JSP489 (5.6s)
+info: JSP489.lean:106:0: 'JustinSunPrize.JSP000489.fresh_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP489.lean:107:0: 'JustinSunPrize.JSP000489.history_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP489.lean:108:0: 'JustinSunPrize.JSP000489.picked_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP489.lean:109:0: 'JustinSunPrize.JSP000489.picked_ne_of_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP489.lean:110:0: 'JustinSunPrize.JSP000489.picked_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP489.lean:111:0: 'JustinSunPrize.JSP000489.infinitely_many_each_color' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP489.lean:112:0: 'JustinSunPrize.JSP000489.finite_color_splitting' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP489.lean:113:0: 'JustinSunPrize.JSP000489.bernstein_propertyB' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3093 jobs).

@@ -1,0 +1,28 @@
+$NEGATIVE_FIXTURE/constant_coloring.lean:80:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Function.invFun e (e (Nat.pair i (Nat.pair c r)))
+in the target expression
+  0 = c
+
+case hf.right
+α : Type u
+A : ℕ → Set α
+hA : ∀ (i : ℕ), (A i).Infinite
+this : Nonempty α := Nonempty.intro (Exists.choose (Set.Infinite.nonempty (hA 0)))
+B : ℕ → Set α := fun t => A (Nat.unpair t).1
+hB : ∀ (t : ℕ), (B t).Infinite
+e : ℕ → α := picked B hB
+he : Function.Injective e
+f : α → ℕ := fun x => 0
+i c r : ℕ
+⊢ 0 = c
+'JustinSunPrize.JSP000489.fresh_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000489.history_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000489.picked_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000489.picked_ne_of_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000489.picked_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000489.infinitely_many_each_color' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'JustinSunPrize.JSP000489.finite_color_splitting' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000489.bernstein_propertyB' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

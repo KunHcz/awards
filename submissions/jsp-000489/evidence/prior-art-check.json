@@ -1,0 +1,16 @@
+{
+  "checked_at_utc": "2026-09-16T17:43:56.058229+00:00",
+  "queries": [
+    {
+      "query": "repo:TheJustinSunPrize/awards \"JSP-000489\"",
+      "items": [],
+      "total_count": 0
+    },
+    {
+      "query": "repo:TheJustinSunPrize/awards \"602\"",
+      "items": [],
+      "total_count": 0
+    }
+  ],
+  "index_limit": "Limited issue/PR search only; global first-formalization priority is not established."
+}

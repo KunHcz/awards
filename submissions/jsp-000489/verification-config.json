@@ -1,0 +1,31 @@
+{
+  "module": "JSP489",
+  "namespace": "JustinSunPrize.JSP000489",
+  "problem_id": "JSP-000489 / Erdos602 countable-index case",
+  "scope": "Bernstein countable-family splitting; infinitely many points of each of countably many colors in each infinite set. Not uncountable-index Property B.",
+  "imports": [
+    "Mathlib.Data.Nat.Pairing",
+    "Mathlib.Data.Set.Finite.Basic",
+    "Mathlib.Tactic"
+  ],
+  "theorems": [
+    "fresh_spec",
+    "history_mono",
+    "picked_mem",
+    "picked_ne_of_lt",
+    "picked_injective",
+    "infinitely_many_each_color",
+    "finite_color_splitting",
+    "bernstein_propertyB"
+  ],
+  "mutations": {
+    "constant_coloring": [
+      "fun x => (Nat.unpair (Nat.unpair (Function.invFun e x)).2).1",
+      "fun _ => 0"
+    ],
+    "reused_point": [
+      "fresh A hA n (history A hA n)\n\ntheorem history_mono",
+      "fresh A hA 0 (history A hA 0)\n\ntheorem history_mono"
+    ]
+  }
+}
