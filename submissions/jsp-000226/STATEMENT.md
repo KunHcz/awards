@@ -6,7 +6,7 @@
 
 The original equation appears in Erdős–Graham, *Old and new problems and results in
 combinatorial number theory* (1980), p. 63. Borwein–Loring, *Some questions of Erdős and
-Graham on numbers of the form sum g_n/2^{g_n}*, Mathematics of Computation 55 (1990),
+Graham on numbers of the form sum g_n/2^{g_n}*, Mathematics of Computation 54 (189) (1990),
 377–394, provides the consecutive-block family. Tengely–Ulas–Zygadło restate the
 identity explicitly in Remark 2.2 of
 [arXiv:2008.01501v1](https://arxiv.org/html/2008.01501v1#S2), published in Journal of
