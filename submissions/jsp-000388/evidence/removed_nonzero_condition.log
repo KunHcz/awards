@@ -1,0 +1,48 @@
+$NEGATIVE_FIXTURE/removed_nonzero_condition.lean:107:58: error: Application type mismatch: The argument
+  ha
+has type
+  True
+but is expected to have type
+  a ≠ 0
+in the application
+  quad_difference_lattice a b c ha
+$NEGATIVE_FIXTURE/removed_nonzero_condition.lean:109:26: error: Application type mismatch: The argument
+  ha
+has type
+  True
+but is expected to have type
+  a ≠ 0
+in the application
+  quad_one_sided a b c ha
+$NEGATIVE_FIXTURE/removed_nonzero_condition.lean:115:42: error: Application type mismatch: The argument
+  ha
+has type
+  a ≠ 0
+but is expected to have type
+  True
+in the application
+  no_quadratic_complement a b c ha
+$NEGATIVE_FIXTURE/removed_nonzero_condition.lean:135:38: error: Application type mismatch: The argument
+  hc
+has type
+  p.coeff 2 ≠ 0
+but is expected to have type
+  True
+in the application
+  no_quadratic_complement ?m.75 ?m.76 ?m.77 hc
+'JustinSunPrize.JSP000388.congruent_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.no_infinite_complement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.terms_of_exact' does not depend on any axioms
+'JustinSunPrize.JSP000388.complement_infinite_of_one_sided' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.no_complement_of_lattice_and_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.quad_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.quad_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.quad_one_sided' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.quad_difference_lattice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.no_quadratic_complement' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.answer_quadratic' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.no_degree_two_polynomial_complement' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'JustinSunPrize.JSP000388.linear_has_complement' depends on axioms: [propext]

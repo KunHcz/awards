@@ -1,0 +1,15 @@
+'JustinSunPrize.JSP000388.congruent_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.no_infinite_complement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.terms_of_exact' does not depend on any axioms
+'JustinSunPrize.JSP000388.complement_infinite_of_one_sided' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.no_complement_of_lattice_and_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.quad_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.quad_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.quad_one_sided' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.quad_difference_lattice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.no_quadratic_complement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.answer_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000388.no_degree_two_polynomial_complement' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'JustinSunPrize.JSP000388.linear_has_complement' depends on axioms: [propext]

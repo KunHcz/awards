@@ -1,0 +1,43 @@
+{
+  "checked_at_utc": "2026-09-16T13:05:31.921644+00:00",
+  "record_checks": "PASS",
+  "record_tests": 22,
+  "package_tests": 9,
+  "proof_digests_match": true,
+  "package_local_links": [
+    {
+      "from": "PRIOR_ART.md",
+      "target": "evidence/prior-art-check.json"
+    },
+    {
+      "from": "README.md",
+      "target": "JSP388.lean"
+    },
+    {
+      "from": "README.md",
+      "target": "scripts/verify.py"
+    },
+    {
+      "from": "README.md",
+      "target": "verification-config.json"
+    },
+    {
+      "from": "README.md",
+      "target": "evidence/verification.json"
+    },
+    {
+      "from": "README.md",
+      "target": "STATEMENT.md"
+    },
+    {
+      "from": "README.md",
+      "target": "PRIOR_ART.md"
+    },
+    {
+      "from": "README.md",
+      "target": "LICENSE"
+    }
+  ],
+  "original_records_unchanged": true,
+  "limit": "Repository CI does not execute the Lean proof; mathematical review remains separate."
+}

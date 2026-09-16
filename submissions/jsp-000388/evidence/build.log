@@ -1,0 +1,17 @@
+ℹ [3092/3093] Built JSP388 (1.9s)
+info: JSP388.lean:147:0: 'JustinSunPrize.JSP000388.congruent_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP388.lean:148:0: 'JustinSunPrize.JSP000388.no_infinite_complement' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP388.lean:149:0: 'JustinSunPrize.JSP000388.terms_of_exact' does not depend on any axioms
+info: JSP388.lean:150:0: 'JustinSunPrize.JSP000388.complement_infinite_of_one_sided' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP388.lean:151:0: 'JustinSunPrize.JSP000388.no_complement_of_lattice_and_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP388.lean:152:0: 'JustinSunPrize.JSP000388.quad_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP388.lean:153:0: 'JustinSunPrize.JSP000388.quad_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP388.lean:154:0: 'JustinSunPrize.JSP000388.quad_one_sided' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP388.lean:155:0: 'JustinSunPrize.JSP000388.quad_difference_lattice' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP388.lean:156:0: 'JustinSunPrize.JSP000388.no_quadratic_complement' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP388.lean:157:0: 'JustinSunPrize.JSP000388.answer_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP388.lean:158:0: 'JustinSunPrize.JSP000388.no_degree_two_polynomial_complement' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: JSP388.lean:159:0: 'JustinSunPrize.JSP000388.linear_has_complement' depends on axioms: [propext]
+Build completed successfully (3093 jobs).
