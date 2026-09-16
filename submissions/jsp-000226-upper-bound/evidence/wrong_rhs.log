@@ -1,0 +1,142 @@
+$NEGATIVE_FIXTURE/wrong_rhs.lean:48:2: error: Tactic `decide` failed for proposition
+  weightedSum exponents = 3 / 2 ^ 3
+because its `Decidable` instance
+  instDecidableEqRat (weightedSum exponents) (3 / 2 ^ 3)
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match
+    (((fun a => ↑a / 2 ^ a) 3).add
+        (List.foldr (fun x1 x2 => x1 + x2) 0
+          (List.map (fun a => ↑a / 2 ^ a)
+            (6 ::
+              9 ::
+                10 ::
+                  12 ::
+                    14 ::
+                      18 ::
+                        19 ::
+                          21 ::
+                            22 ::
+                              24 ::
+                                have y :=
+                                  36 ::
+                                    39 ::
+                                      42 ::
+                                        43 ::
+                                          45 ::
+                                            47 ::
+                                              have y :=
+                                                have y :=
+                                                  83 ::
+                                                    84 ::
+                                                      85 ::
+                                                        87 ::
+                                                          92 ::
+                                                            93 ::
+                                                              have y :=
+                                                                have y :=
+                                                                  have y :=
+                                                                    179 ::
+                                                                      181 ::
+                                                                        182 ::
+                                                                          183 ::
+                                                                            184 ::
+                                                                              185 ::
+                                                                                have y :=
+                                                                                  have y :=
+                                                                                    have y :=
+                                                                                      have y :=
+                                                                                        [377, 379, 381, 387, 390, 392];
+                                                                                      366 ::
+                                                                                        368 ::
+                                                                                          369 :: 370 :: 371 :: 373 :: y;
+                                                                                    have y :=
+                                                                                      352 ::
+                                                                                        356 ::
+                                                                                          360 :: 363 :: 364 :: 365 :: y;
+                                                                                    343 ::
+                                                                                      344 ::
+                                                                                        345 :: 347 :: 348 :: 349 :: y;
+                                                                                  have y :=
+                                                                                    have y :=
+                                                                                      332 ::
+                                                                                        333 ::
+                                                                                          334 :: 335 :: 337 :: 338 :: y;
+                                                                                    317 ::
+                                                                                      319 ::
+                                                                                        320 :: 321 :: 324 :: 326 :: y;
+                                                                                  have y :=
+                                                                                    306 ::
+                                                                                      308 ::
+                                                                                        309 :: 314 :: 315 :: 316 :: y;
+                                                                                  291 :: 295 :: 298 :: 302 :: 303 :: y;
+                                                                                have y :=
+                                                                                  have y :=
+                                                                                    have y :=
+                                                                                      279 ::
+                                                                                        281 ::
+                                                                                          283 :: 288 :: 289 :: 290 :: y;
+                                                                                    272 ::
+                                                                                      274 ::
+                                                                                        275 :: 276 :: 277 :: 278 :: y;
+                                                                                  have y :=
+                                                                                    260 ::
+                                                                                      261 ::
+                                                                                        262 :: 263 :: 264 :: 269 :: y;
+                                                                                  249 :: 251 :: 253 :: 254 :: 259 :: y;
+                                                                                have y :=
+                                                                                  have y :=
+                                                                                    226 ::
+                                                                                      229 ::
+                                                                                        234 :: 235 :: 243 :: 248 :: y;
+                                                                                  211 ::
+                                                                                    213 ::
+                                                                                      217 :: 221 :: 222 :: 224 :: y;
+                                                                                have y :=
+                                                                                  201 ::
+                                                                                    203 ::
+                                                                                      204 :: 206 :: 207 :: 209 :: y;
+                                                                                187 :: 189 :: 194 :: 197 :: 200 :: y;
+                                                                  164 :: 167 :: 172 :: 173 :: 175 :: 177 :: y;
+                                                                have y := 154 :: 155 :: 157 :: 158 :: 160 :: 163 :: y;
+                                                                147 :: 148 :: 150 :: 151 :: 152 :: y;
+                                                              have y :=
+                                                                have y := 132 :: 135 :: 138 :: 140 :: 141 :: 142 :: y;
+                                                                121 :: 124 :: 126 :: 127 :: 128 :: 129 :: y;
+                                                              have y := 107 :: 108 :: 109 :: 112 :: 116 :: 120 :: y;
+                                                              95 :: 96 :: 97 :: 100 :: 101 :: y;
+                                                69 :: 71 :: 75 :: 80 :: 81 :: 82 :: y;
+                                              have y := 58 :: 59 :: 61 :: 65 :: 66 :: 68 :: y;
+                                              48 :: 49 :: 50 :: 52 :: 53 :: y;
+                                26 :: 29 :: 30 :: 33 :: 34 :: 35 :: y)))).num,
+    (Rat.mul 3 (2 ^ 3).inv).num with
+  | Int.ofNat a, Int.ofNat b =>
+    match decEq a b with
+    | isTrue h => isTrue ⋯
+    | isFalse h => isFalse ⋯
+  | Int.ofNat a, Int.negSucc a_1 => isFalse ⋯
+  | Int.negSucc a, Int.ofNat a_1 => isFalse ⋯
+  | Int.negSucc a, Int.negSucc b =>
+    match decEq a b with
+    | isTrue h => isTrue ⋯
+    | isFalse h => isFalse ⋯
+$NEGATIVE_FIXTURE/wrong_rhs.lean:67:33: error: Application type mismatch: The argument
+  rational_identity
+has type
+  weightedSum exponents = 3 / 2 ^ 3
+but is expected to have type
+  weightedSum exponents = ↑2 / 2 ^ 2
+in the application
+  h 2 exponents ?m.7 ?m.8 strictly_increasing positive rational_identity
+'DyadicBound.length_eq' does not depend on any axioms
+'DyadicBound.strictly_increasing' does not depend on any axioms
+'DyadicBound.positive' does not depend on any axioms
+'DyadicBound.bounded' does not depend on any axioms
+'DyadicBound.last_eq' does not depend on any axioms
+'DyadicBound.last_mem' depends on axioms: [propext, Quot.sound]
+'DyadicBound.scaled_integer_identity' depends on axioms: [propext]
+'DyadicBound.rational_identity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'DyadicBound.bound_violation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DyadicBound.certified_counterexample' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'DyadicBound.conjecture_false' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
