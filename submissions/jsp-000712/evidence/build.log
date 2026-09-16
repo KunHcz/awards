@@ -1,0 +1,16 @@
+ℹ [3092/3093] Built JSP712 (11s)
+info: JSP712.lean:216:0: 'JustinSunPrize.JSP000712.good_iff_divisorSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP712.lean:217:0: 'JustinSunPrize.JSP000712.good_periodic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP712.lean:218:0: 'JustinSunPrize.JSP000712.periodic_multiple' depends on axioms: [propext]
+info: JSP712.lean:219:0: 'JustinSunPrize.JSP000712.count_shift' depends on axioms: [propext, Quot.sound]
+info: JSP712.lean:220:0: 'JustinSunPrize.JSP000712.count_blocks' depends on axioms: [propext, Quot.sound]
+info: JSP712.lean:221:0: 'JustinSunPrize.JSP000712.count_decomposition' depends on axioms: [propext, Quot.sound]
+info: JSP712.lean:222:0: 'JustinSunPrize.JSP000712.periodic_count_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP712.lean:223:0: 'JustinSunPrize.JSP000712.periodic_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP712.lean:224:0: 'JustinSunPrize.JSP000712.good_factorial' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP712.lean:225:0: 'JustinSunPrize.JSP000712.densityNumerator_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP712.lean:226:0: 'JustinSunPrize.JSP000712.densityNumerator_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP712.lean:227:0: 'JustinSunPrize.JSP000712.divisor_sum_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP712.lean:228:0: 'JustinSunPrize.JSP000712.literal_divisor_sum_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP712.lean:229:0: 'JustinSunPrize.JSP000712.small_density_values' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3093 jobs).

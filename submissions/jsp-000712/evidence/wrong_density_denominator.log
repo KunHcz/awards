@@ -1,0 +1,38 @@
+$NEGATIVE_FIXTURE/wrong_density_denominator.lean:173:4: error: Tactic `apply` failed: could not unify the conclusion of `periodic_density ?m.72 t.factorial (Nat.factorial_pos t)`
+  Tendsto (fun N => ↑(Nat.count ?m.72 N) / ↑N) atTop (𝓝 (↑(Nat.count ?m.72 t.factorial) / ↑t.factorial))
+with the goal
+  Tendsto (fun N => ↑(Nat.count (fun j => Good t (j + 1)) N) / ↑N) atTop
+    (𝓝 (↑(densityNumerator t) / (↑t.factorial + 1)))
+
+Note: The full type of `periodic_density ?m.72 t.factorial (Nat.factorial_pos t)` is
+  (∀ (n : ℕ), ?m.72 (n + t.factorial) ↔ ?m.72 n) →
+    Tendsto (fun N => ↑(Nat.count ?m.72 N) / ↑N) atTop (𝓝 (↑(Nat.count ?m.72 t.factorial) / ↑t.factorial))
+
+case refine_2
+t : ℕ
+⊢ Tendsto (fun N => ↑(Nat.count (fun j => Good t (j + 1)) N) / ↑N) atTop
+    (𝓝 (↑(densityNumerator t) / (↑t.factorial + 1)))
+$NEGATIVE_FIXTURE/wrong_density_denominator.lean:205:4: error: Type mismatch: After simplification, term
+  h
+ has type
+  Tendsto (fun N => ↑(Nat.count (fun j => Good t (j + 1)) N) / ↑N) atTop
+    (𝓝 (↑(densityNumerator t) / (↑t.factorial + 1)))
+but is expected to have type
+  Tendsto (fun N => ↑(Nat.count (fun j => Good t (j + 1)) N) / ↑N) atTop (𝓝 (↑(densityNumerator t) / ↑t.factorial))
+'JustinSunPrize.JSP000712.good_iff_divisorSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000712.good_periodic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000712.periodic_multiple' depends on axioms: [propext]
+'JustinSunPrize.JSP000712.count_shift' depends on axioms: [propext, Quot.sound]
+'JustinSunPrize.JSP000712.count_blocks' depends on axioms: [propext, Quot.sound]
+'JustinSunPrize.JSP000712.count_decomposition' depends on axioms: [propext, Quot.sound]
+'JustinSunPrize.JSP000712.periodic_count_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000712.periodic_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000712.good_factorial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000712.densityNumerator_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000712.densityNumerator_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000712.divisor_sum_density' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000712.literal_divisor_sum_density' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'JustinSunPrize.JSP000712.small_density_values' depends on axioms: [propext, Classical.choice, Quot.sound]
