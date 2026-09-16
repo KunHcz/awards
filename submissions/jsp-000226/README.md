@@ -1,10 +1,10 @@
-# JSP-000226: the Borwein–Loring infinite family
+# JSP-000226: infinitude and the sharp fixed-term maximum
 
 ## English
 
 This package proves the **infinitude subproblem** of Erdős 261: infinitely many positive
 integers `n` admit a decomposition of `n / 2^n` into at least two terms `a / 2^a` with distinct
-positive integer `a`. It formalizes the classical Borwein–Loring family, not the full broad
+positive integer `a`. It also proves the **sharp maximum starting exponent for each fixed number of terms**, including uniqueness of the maximizing ordered representation. It formalizes the classical Borwein–Loring family and the bound in Tengely–Ulas–Zygadło (2020), Theorem 2.1(i), not the full broad
 JSP-000226 entry. It does **not** prove the assertion for every positive `n`, or any
 continuum-cardinality claim about infinite-series representations.
 
@@ -16,8 +16,15 @@ n / 2^n = sum from i=1 to m of (n+i) / 2^(n+i).
 
 The smallest example is `4/16 = 5/32 + 6/64`; the next family members are `11, 26, 57`.
 The formal proof quantifies over all natural `m`, not a finite numerical sample.
-[Source](JSP226.lean) contains six audited theorems, including the exact rational identity,
+[Source](JSP226.lean) contains sixteen audited theorems, including the exact rational identity,
 the distinctness and positivity of the terms, and unboundedness of the family.
+
+For every fixed `k >= 2`, any strictly increasing positive solution has
+`n <= 2^(k+1) - k - 2`. The original family attains this bound. Moreover, at this
+maximum the only ordered solution is `a_i = n+i` for `i=1,...,k`.
+`maximal_start` states the exact maximum with `IsGreatest`, and
+`maximal_representation_unique` proves its equality case. This does not assert
+that every smaller `n` has a representation with `k` terms.
 
 ## Reproduce
 
@@ -34,7 +41,7 @@ python3 scripts/verify.py
 The last command writes to `verification-output/`, preserving the recorded evidence.
 It checks dependency revisions and tracked source cleanliness, deletes only this package's
 build outputs, rebuilds with warnings treated as errors, audits every theorem, and runs
-`leanchecker --fresh` on all imported and local constants. It also executes five negative
+`leanchecker --fresh` on all imported and local constants. It also executes seven negative
 controls. See [the script](scripts/verify.py), [configuration](verification-config.json),
 and [recorded verification](evidence/verification.json).
 

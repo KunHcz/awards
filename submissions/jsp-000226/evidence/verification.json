@@ -1,9 +1,9 @@
 {
   "status": "LOCAL_VERIFIED_NOT_OFFICIALLY_REVIEWED",
   "problem_id": "JSP-000226",
-  "scope": "Erdos 261(i): infinitely many distinct positive finite dyadic decompositions; not all n and not the infinite-series questions",
-  "checked_at_utc": "2026-09-16T12:50:23.625301+00:00",
-  "completed_at_utc": "2026-09-16T12:54:36.178223+00:00",
+  "scope": "Erdos 261(i) infinitude; TUZ 2020 sharp maximum n for each k>=2 and uniqueness of the maximizing ordered representation; not all-n existence or infinite-series questions",
+  "checked_at_utc": "2026-09-16T16:00:03.925078+00:00",
+  "completed_at_utc": "2026-09-16T16:04:10.086690+00:00",
   "lean_version": "Lean (version 4.34.0, arm64-apple-darwin24.6.0, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)",
   "dependency_pins": {
     "mathlib": "5ed2965256430c3649e86755f9576b54eca72435",
@@ -21,7 +21,7 @@
   "independent_checker_implementation": false,
   "independent_human_review": false,
   "full_dependency_source_rebuild": false,
-  "audited_theorem_count": 6,
+  "audited_theorem_count": 16,
   "axioms": {
     "JustinSunPrize.JSP000226.block_sum": [
       "propext",
@@ -50,6 +50,56 @@
       "propext",
       "Classical.choice",
       "Quot.sound"
+    ],
+    "JustinSunPrize.JSP000226.dyadicWeight_pos": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JustinSunPrize.JSP000226.dyadicWeight_succ_le": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JustinSunPrize.JSP000226.dyadicWeight_antitone": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JustinSunPrize.JSP000226.dyadicWeight_strict": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JustinSunPrize.JSP000226.exponent_after_start": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JustinSunPrize.JSP000226.ordered_exponent_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JustinSunPrize.JSP000226.sharp_start_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JustinSunPrize.JSP000226.family_ordered": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JustinSunPrize.JSP000226.maximal_start": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JustinSunPrize.JSP000226.maximal_representation_unique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
     ]
   },
   "negative_controls": {
@@ -72,12 +122,20 @@
     "repeated_summands": {
       "exit_code": 1,
       "status": "REJECTED_BY_LEAN"
+    },
+    "wrong_sharp_bound": {
+      "exit_code": 1,
+      "status": "REJECTED_BY_LEAN"
+    },
+    "wrong_maximizer": {
+      "exit_code": 1,
+      "status": "REJECTED_BY_LEAN"
     }
   },
   "files": {
     "JSP226.lean": {
-      "sha256": "bfc780129a803c9c3328a0012bae0248b9992dbe7cff09f9b7df928b8e6fe4f9",
-      "bytes": 3245
+      "sha256": "1c9cedfaadb90d1eef382f7300c4986e395a7b309d604cc89beefaf583a30bbb",
+      "bytes": 9988
     },
     "lean-toolchain": {
       "sha256": "8733782dc070a99b312039cda424f601b80f3be6f6f512627da5ba25adc27632",
@@ -92,8 +150,8 @@
       "bytes": 3540
     },
     "verification-config.json": {
-      "sha256": "9ccda4502e3250a979253c1d15673726a30ff60800e4fc5abb1e415382224588",
-      "bytes": 663
+      "sha256": "a54fb3764fea1db4bbd0a3cbd78965e1bc1bb0f2dc2b160ef360a6c85f03fa2d",
+      "bytes": 1204
     },
     "scripts/verify.py": {
       "sha256": "6d5516f38390852532a94b0407ea732a493faeb3b9d321c48de8c5cb19a6a9e1",

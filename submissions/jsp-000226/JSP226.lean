@@ -1,5 +1,6 @@
 /- SPDX-License-Identifier: Apache-2.0
-JSP-000226 / Erdos 261(i): the Borwein--Loring infinite family.
+JSP-000226 / Erdos 261(i): infinitude and the sharp fixed-term extremum.
+The upper bound is TUZ (2020), Theorem 2.1(i); its equality case is proved here.
 The identity is classical, not a new mathematical discovery.
 This file does not claim all n or continuum-many rational representations.
 -/
@@ -79,10 +80,169 @@ theorem infinitely_many_representable :
       family_representable (b + 2) (by omega)⟩
   · exact lt_of_lt_of_le (by omega) (family_bound (b + 2))
 
+
+def dyadicWeight (n : ℕ) : ℚ := (n : ℚ) / 2 ^ n
+
+def OrderedDecomposition (n k : ℕ) : Prop :=
+  ∃ a : Fin k → ℕ, StrictMono a ∧ (∀ i, 0 < a i) ∧
+    dyadicWeight n = ∑ i, dyadicWeight (a i)
+
+theorem dyadicWeight_pos (n : ℕ) (hn : 0 < n) : 0 < dyadicWeight n := by
+  unfold dyadicWeight
+  positivity
+
+theorem dyadicWeight_succ_le (n : ℕ) (hn : 1 ≤ n) :
+    dyadicWeight (n + 1) ≤ dyadicWeight n := by
+  unfold dyadicWeight
+  rw [div_le_div_iff₀ (by positivity) (by positivity), pow_succ]
+  push_cast
+  calc
+    ((n : ℚ) + 1) * 2 ^ n ≤ (2 * n) * 2 ^ n :=
+      mul_le_mul_of_nonneg_right (by exact_mod_cast (show n + 1 ≤ 2 * n by omega))
+        (by positivity)
+    _ = n * (2 ^ n * 2) := by ring
+
+theorem dyadicWeight_antitone {a b : ℕ} (ha : 1 ≤ a) (hab : a ≤ b) :
+    dyadicWeight b ≤ dyadicWeight a := by
+  induction b, hab using Nat.le_induction with
+  | base => exact le_rfl
+  | succ b hab ih => exact (dyadicWeight_succ_le b (by omega)).trans ih
+
+theorem dyadicWeight_strict {a b : ℕ} (ha : 2 ≤ a) (hab : a < b) :
+    dyadicWeight b < dyadicWeight a := by
+  have hstep : dyadicWeight (a + 1) < dyadicWeight a := by
+    unfold dyadicWeight
+    rw [div_lt_div_iff₀ (by positivity) (by positivity), pow_succ]
+    push_cast
+    calc
+      ((a : ℚ) + 1) * 2 ^ a < (2 * a) * 2 ^ a :=
+        mul_lt_mul_of_pos_right (by exact_mod_cast (show a + 1 < 2 * a by omega))
+          (by positivity)
+      _ = a * (2 ^ a * 2) := by ring
+  exact lt_of_le_of_lt (dyadicWeight_antitone (by omega) (by omega)) hstep
+
+/-- No term can be at or before the left-hand exponent. Repetition is not used here. -/
+theorem exponent_after_start {n k : ℕ} (hk : 2 ≤ k) (a : Fin k → ℕ)
+    (hpos : ∀ i, 0 < a i) (heq : dyadicWeight n = ∑ i, dyadicWeight (a i))
+    (i : Fin k) : n < a i := by
+  let : Nontrivial (Fin k) := Fin.nontrivial_iff_two_le.mpr hk
+  obtain ⟨j, hji⟩ := exists_ne i
+  have hterm : dyadicWeight (a i) < ∑ t, dyadicWeight (a t) :=
+    Finset.single_lt_sum hji (Finset.mem_univ i) (Finset.mem_univ j)
+      (dyadicWeight_pos _ (hpos j)) (fun t _ _ => (dyadicWeight_pos _ (hpos t)).le)
+  by_contra h
+  have hle := dyadicWeight_antitone (hpos i) (show a i ≤ n by omega)
+  rw [← heq] at hterm
+  exact (not_lt_of_ge hle) hterm
+
+/-- Strictly ordered exponents dominate the consecutive comparison block. -/
+theorem ordered_exponent_bound {n k : ℕ} (hk : 2 ≤ k) (a : Fin k → ℕ)
+    (hmono : StrictMono a) (hpos : ∀ i, 0 < a i)
+    (heq : dyadicWeight n = ∑ i, dyadicWeight (a i)) :
+    ∀ i : Fin k, n + i.val + 1 ≤ a i := by
+  have aux : ∀ j : ℕ, ∀ hj : j < k, n + j + 1 ≤ a ⟨j, hj⟩ := by
+    intro j
+    induction j with
+    | zero =>
+      intro hj
+      have := exponent_after_start hk a hpos heq ⟨0, hj⟩
+      omega
+    | succ j ih =>
+      intro hj
+      have hj' : j < k := by omega
+      have hprev := ih hj'
+      have hlt := hmono (show (⟨j, hj'⟩ : Fin k) < ⟨j + 1, hj⟩ from Nat.lt_succ_self j)
+      omega
+  intro i
+  exact aux i.val i.isLt
+
+/-- The TUZ sharp upper bound, with all n, k and exponents universally quantified. -/
+theorem sharp_start_bound {n k : ℕ} (hk : 2 ≤ k) (h : OrderedDecomposition n k) :
+    n ≤ family k := by
+  obtain ⟨a, hmono, hpos, heq⟩ := h
+  have ha := ordered_exponent_bound hk a hmono hpos heq
+  have hsum : dyadicWeight n ≤ ∑ i : Fin k, dyadicWeight (n + i.val + 1) := by
+    rw [heq]
+    exact Finset.sum_le_sum (fun i _ => dyadicWeight_antitone (by omega) (ha i))
+  change (n : ℚ) / 2 ^ n ≤ ∑ i : Fin k, ((n + i.val + 1 : ℕ) : ℚ) / 2 ^ (n + i.val + 1) at hsum
+  rw [Fin.sum_univ_eq_sum_range (fun i : ℕ => ((n + i + 1 : ℕ) : ℚ) / 2 ^ (n + i + 1)), block_sum] at hsum
+  have hscaled := mul_le_mul_of_nonneg_right hsum
+    (show (0 : ℚ) ≤ 2 ^ n * 2 ^ k by positivity)
+  have hl : ((n : ℚ) / 2 ^ n) * (2 ^ n * 2 ^ k) = n * 2 ^ k := by
+    field_simp
+  have hr : (((n : ℚ) + 2) / 2 ^ n - ((n : ℚ) + k + 2) / 2 ^ (n + k)) *
+      (2 ^ n * 2 ^ k) = (n + 2) * 2 ^ k - (n + k + 2) := by
+    rw [pow_add]
+    field_simp
+  rw [hl, hr] at hscaled
+  have hq : (n : ℚ) + k + 2 ≤ (2 : ℚ) ^ (k + 1) := by
+    rw [pow_succ]
+    nlinarith
+  have hn : n + k + 2 ≤ 2 ^ (k + 1) := by exact_mod_cast hq
+  have hb := family_balance k
+  omega
+
+theorem family_ordered (k : ℕ) : OrderedDecomposition (family k) k := by
+  refine ⟨fun i => family k + i.val + 1, ?_, ?_, ?_⟩
+  · intro i j hij
+    dsimp
+    exact Nat.add_lt_add_right (Nat.add_lt_add_left hij _) _
+  · intro i
+    dsimp
+    omega
+  · unfold dyadicWeight
+    exact (family_identity k).trans
+      (Fin.sum_univ_eq_sum_range
+        (fun i : ℕ => ((family k + i + 1 : ℕ) : ℚ) / 2 ^ (family k + i + 1)) k).symm
+
+/-- Exact maximum possible starting exponent at each fixed number of summands. -/
+theorem maximal_start (k : ℕ) (hk : 2 ≤ k) :
+    IsGreatest {n : ℕ | 0 < n ∧ OrderedDecomposition n k} (family k) := by
+  refine ⟨⟨by have := family_bound k; omega, family_ordered k⟩, ?_⟩
+  intro n hn
+  exact sharp_start_bound hk hn.2
+
+/-- Equality at the maximum forces the unique consecutive block of exponents. -/
+theorem maximal_representation_unique (k : ℕ) (hk : 2 ≤ k) (a : Fin k → ℕ)
+    (hmono : StrictMono a) (hpos : ∀ i, 0 < a i)
+    (heq : dyadicWeight (family k) = ∑ i, dyadicWeight (a i)) :
+    ∀ i, a i = family k + i.val + 1 := by
+  have ha := ordered_exponent_bound hk a hmono hpos heq
+  have hle : ∀ i ∈ (Finset.univ : Finset (Fin k)),
+      dyadicWeight (a i) ≤ dyadicWeight (family k + i.val + 1) := by
+    intro i _
+    exact dyadicWeight_antitone (by omega) (ha i)
+  have hsum : (∑ i, dyadicWeight (a i)) =
+      ∑ i : Fin k, dyadicWeight (family k + i.val + 1) := by
+    rw [← heq]
+    unfold dyadicWeight
+    exact (family_identity k).trans
+      (Fin.sum_univ_eq_sum_range
+        (fun i : ℕ => ((family k + i + 1 : ℕ) : ℚ) / 2 ^ (family k + i + 1)) k).symm
+  have hterms := (Finset.sum_eq_sum_iff_of_le hle).mp hsum
+  intro i
+  have hbase := family_bound k
+  by_contra hne
+  have hlt : family k + i.val + 1 < a i := by have := ha i; omega
+  have hstrict := dyadicWeight_strict (by omega : 2 ≤ family k + i.val + 1) hlt
+  rw [hterms i (Finset.mem_univ i)] at hstrict
+  exact lt_irrefl _ hstrict
+
+
 #print axioms block_sum
 #print axioms family_bound
 #print axioms family_balance
 #print axioms family_identity
 #print axioms family_representable
 #print axioms infinitely_many_representable
+#print axioms dyadicWeight_pos
+#print axioms dyadicWeight_succ_le
+#print axioms dyadicWeight_antitone
+#print axioms dyadicWeight_strict
+#print axioms exponent_after_start
+#print axioms ordered_exponent_bound
+#print axioms sharp_start_bound
+#print axioms family_ordered
+#print axioms maximal_start
+#print axioms maximal_representation_unique
 end JustinSunPrize.JSP000226
