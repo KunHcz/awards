@@ -1,5 +1,0 @@
-Fresh target-closure replay: 9 targets; 4 quotient primitives initialized as one kernel group
-CONTROL: kernel accepted True from True.intro
-CONTROL: kernel rejected False from True.intro
-Checked 10931 logical declarations in target dependency closures
-PASS: all nine targets and their complete transitive logical dependencies replayed from an empty environment

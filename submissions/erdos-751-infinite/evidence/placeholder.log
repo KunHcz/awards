@@ -1,2 +1,0 @@
-$NEGATIVE_FIXTURE/placeholder.lean:2:8: warning: declaration uses 'sorry'
-'bad' depends on axioms: [sorryAx]
