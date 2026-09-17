@@ -1,5 +1,12 @@
 # JSP-000007: analytic, topological, and restricted geometric formalizations
 
+**Newly completed restricted case:** the [positive-Ricci package](positive-ricci/README.md)
+proves the sphere conclusion under an explicit positive-Ricci metric
+hypothesis. Its full fresh kernel replay and negative controls have finished;
+the [source-bound record](positive-ricci/evidence/verification.json) reports
+the actual checks. It does not remove that geometric hypothesis or prove
+the unrestricted topological Poincare theorem.
+
 **Extended submission:** the [additive topology supplement](TOPOLOGY_EXTENSION.md)
 provides an immutable 45-theorem upstream snapshot, including three additional
 topological endgame components, and a separate executable verifier. The original
