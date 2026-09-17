@@ -1,0 +1,49 @@
+{
+  "checked_at_utc": "2026-09-17T10:38:45.603800+00:00",
+  "scope": "Only submissions/erdos-1008",
+  "audited_theorems": 26,
+  "negative_controls": 7,
+  "proof_and_verifier_digests_match": true,
+  "repository_tests": 22,
+  "package_tests": 13,
+  "record_checks": "PASS",
+  "original_records_unchanged": true,
+  "private_material_scan": "PASS",
+  "local_links": [
+    {
+      "document": "PRIOR_ART.md",
+      "target": "evidence/prior-art-check.json"
+    },
+    {
+      "document": "README.md",
+      "target": "Erdos1008.lean"
+    },
+    {
+      "document": "README.md",
+      "target": "PROOF.md"
+    },
+    {
+      "document": "README.md",
+      "target": "STATEMENT.md"
+    },
+    {
+      "document": "README.md",
+      "target": "PRIOR_ART.md"
+    },
+    {
+      "document": "README.md",
+      "target": "evidence/verification.json"
+    },
+    {
+      "document": "README.md",
+      "target": "LICENSE"
+    },
+    {
+      "document": "README.md",
+      "target": "NOTICE"
+    }
+  ],
+  "files_scanned": 28,
+  "prior_related_results": "PR313/issue314: all-order KST/Reiman upper bound, PR418: finite-field lower construction for Erdos573; inspected bodies distinguish them from this exact rectangular/Folkman contribution.",
+  "note": "Local verification, not official review. Standard Lean kernel replay, not a separately implemented kernel. Diagnostic trailing whitespace normalized."
+}

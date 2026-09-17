@@ -1,0 +1,216 @@
+{
+  "status": "LOCAL_VERIFIED_NOT_OFFICIALLY_REVIEWED",
+  "problem_id": "Erdos 1008: Folkman obstruction and rectangular exact extremum (JSP correspondence pending)",
+  "scope": "For all s,t, a C4-free subgraph of K(s,t) has at most t+choose(s,2) edges. This is attained for s>=1 and t>=choose(s,2). Full negative answer to the uniform m^(3/4) guarantee. Not a new proof of the modern m^(2/3) lower guarantee, and not a general solution of all rectangular Zarankiewicz numbers.",
+  "checked_at_utc": "2026-09-17T10:31:01.109026+00:00",
+  "completed_at_utc": "2026-09-17T10:38:10.888915+00:00",
+  "lean_version": "Lean (version 4.34.0, arm64-apple-darwin24.6.0, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)",
+  "dependency_pins": {
+    "mathlib": "5ed2965256430c3649e86755f9576b54eca72435",
+    "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+    "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+    "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+    "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+    "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+    "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+    "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+    "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+  },
+  "clean_project_rebuild": true,
+  "full_fresh_kernel_replay": true,
+  "independent_checker_implementation": false,
+  "independent_human_review": false,
+  "full_dependency_source_rebuild": false,
+  "audited_theorem_count": 26,
+  "axioms": {
+    "Erdos1008.incidence_le": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.rectangle_copy": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.pairUnique_of_free": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.free_of_pairUnique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.sum_pairs_le": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.degree_le_one_add_pairs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.incidence_upper": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.incidence_degree": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.incidence_edges": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.incidence_neighbors": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.rectangular_upper": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.leftPair_card": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.pairNeighbors_unique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.pairNeighbors_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.pairUnique_reindex": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.incidenceCount_reindex": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.rectangular_attained": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.rectangular_exact": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.complete_edges": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.folkman": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.folkman_exact": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.fourth_power_scale": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.no_uniform_three_quarters": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.three_quarters_answer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.ten_by_hundred_attained": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos1008.ten_by_hundred_upper": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "negative_controls": {
+    "false_arithmetic": {
+      "exit_code": 1,
+      "status": "REJECTED_BY_LEAN"
+    },
+    "placeholder": {
+      "exit_code": 0,
+      "status": "REJECTED_BY_AXIOM_AUDIT"
+    },
+    "custom_axiom": {
+      "exit_code": 0,
+      "status": "REJECTED_BY_AXIOM_AUDIT"
+    },
+    "false_degree_bound": {
+      "exit_code": 1,
+      "status": "REJECTED_BY_LEAN"
+    },
+    "double_count_edges": {
+      "exit_code": 1,
+      "status": "REJECTED_BY_LEAN"
+    },
+    "reused_pair_neighbors": {
+      "exit_code": 1,
+      "status": "REJECTED_BY_LEAN"
+    },
+    "wrong_power_bridge": {
+      "exit_code": 1,
+      "status": "REJECTED_BY_LEAN"
+    }
+  },
+  "files": {
+    "Erdos1008.lean": {
+      "sha256": "f7712da8418f8ce85df41917df535cae33165763263e2539124d375585df482e",
+      "bytes": 18743
+    },
+    "lean-toolchain": {
+      "sha256": "8733782dc070a99b312039cda424f601b80f3be6f6f512627da5ba25adc27632",
+      "bytes": 25
+    },
+    "lakefile.toml": {
+      "sha256": "f568d932f6ce7e8cc6b46971996a60f6c7de8868146971586c78477a13d08520",
+      "bytes": 241
+    },
+    "lake-manifest.json": {
+      "sha256": "755f873d6dc45171fde7dbb491cefab6aaed4a60bc00b1bb4aa26fe637cfa1b5",
+      "bytes": 3543
+    },
+    "verification-config.json": {
+      "sha256": "6cf088a8a1eb73ba99277f4568e9f877795c09a5aa6cc8c9ca633696211b112c",
+      "bytes": 1886
+    },
+    "scripts/verify.py": {
+      "sha256": "6d5516f38390852532a94b0407ea732a493faeb3b9d321c48de8c5cb19a6a9e1",
+      "bytes": 8513
+    }
+  },
+  "novel_mathematical_discovery": false,
+  "formalization_priority": "NOT_ESTABLISHED",
+  "award_eligibility": "UNDETERMINED"
+}

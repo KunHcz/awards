@@ -1,0 +1,55 @@
+$NEGATIVE_FIXTURE/double_count_edges.lean:190:2: error: Type mismatch
+  Eq.symm h
+has type
+  #(incidence F).edgeFinset = ∑ x, #(F x)
+but is expected to have type
+  #(incidence F).edgeFinset = 2 * incidenceCount F
+$NEGATIVE_FIXTURE/double_count_edges.lean:224:2: error: Type mismatch
+  incidence_upper (neighbors H) (pairUnique_of_free (neighbors H) (Eq.symm he ▸ hfree))
+has type
+  incidenceCount (neighbors H) ≤ Fintype.card β + (Fintype.card α).choose 2
+but is expected to have type
+  2 * incidenceCount (neighbors H) ≤ Fintype.card β + (Fintype.card α).choose 2
+$NEGATIVE_FIXTURE/double_count_edges.lean:291:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  b ≥ 0
+  b + d ≥ 0
+  2*b + d ≥ 1
+  a ≥ 1
+where
+ a := ↑s
+ b := ↑(s.choose 2)
+ c := ↑(Fintype.card (Fin t))
+ d := ↑(t - s.choose 2)
+$NEGATIVE_FIXTURE/double_count_edges.lean:305:68: error: unsolved goals
+s t : ℕ
+he : (incidence fun x => univ) = completeBipartiteGraph (Fin s) (Fin t)
+⊢ s * t * 2 = s * t
+'Erdos1008.incidence_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1008.rectangle_copy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1008.pairUnique_of_free' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1008.free_of_pairUnique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1008.sum_pairs_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1008.degree_le_one_add_pairs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1008.incidence_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1008.incidence_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1008.incidence_edges' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Erdos1008.incidence_neighbors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1008.rectangular_upper' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Erdos1008.leftPair_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1008.pairNeighbors_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1008.pairNeighbors_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1008.pairUnique_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1008.incidenceCount_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1008.rectangular_attained' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Erdos1008.rectangular_exact' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Erdos1008.complete_edges' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Erdos1008.folkman' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Erdos1008.folkman_exact' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Erdos1008.fourth_power_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1008.no_uniform_three_quarters' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Erdos1008.three_quarters_answer' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Erdos1008.ten_by_hundred_attained' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Erdos1008.ten_by_hundred_upper' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
