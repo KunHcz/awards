@@ -8,11 +8,17 @@ Problems are numbered consecutively and grouped into volumes of 100 records (22 
 
 Some dates are explicitly marked as assumptions or pending confirmation. Formal nominations and award records remain in [candidates/](../candidates/README.md) and [awards/](../awards/README.md).
 
+**Submission requirements:** only complete solutions to the original problem are
+accepted. Partial mathematical progress and incomplete Lean formalizations are not
+eligible for submission. Existing historical progress notes do not change this
+requirement. See the [contribution guidelines](../CONTRIBUTING.md#external-solver-and-lean-submissions).
+
 ## Disclaimer and corrections
 
 Information in this problem bank—including problem descriptions, dates, solution status, contributor attributions, Lean proof records, historical bounties, and references—is compiled from publicly available online sources and the project's summaries and assessments of those sources. It is provided for reference and may contain errors, omissions, or outdated information. Inclusion does not by itself constitute independent verification of a result or confirmation of an award or entitlement to payment.
 
 If you find inaccurate, incomplete, or outdated information, please contact the maintainers by [opening a correction issue](https://github.com/TheJustinSunPrize/awards/issues/new?template=correction.yml). Include the JSP identifier, the information in question, your proposed correction, and supporting public sources so the record can be reviewed and corrected.
+
 
 ## Reading conventions
 
