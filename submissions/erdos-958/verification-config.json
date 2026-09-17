@@ -1,0 +1,70 @@
+{
+  "module": "Erdos958",
+  "namespace": "Erdos958",
+  "problem_id": "Erdos 958 (catalog correspondence requested)",
+  "scope": "Full eventual equidistant-line-or-circle classification is false; explicit counterexamples for every n>=4, literal finite-set distance and unordered-pair multiplicities.",
+  "imports": [
+    "Mathlib.Analysis.InnerProductSpace.PiL2",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic",
+    "Mathlib.Geometry.Euclidean.Sphere.Basic",
+    "Mathlib.LinearAlgebra.AffineSpace.FiniteDimensional",
+    "Mathlib.Tactic"
+  ],
+  "theorems": [
+    "dist_sq_coords",
+    "arc_dist_sq",
+    "arc_origin_sq",
+    "angle_pos",
+    "angle_bound",
+    "sqLen_pos",
+    "sqLen_lt_one",
+    "sqLen_strictMono",
+    "points_zero",
+    "points_pos",
+    "points_pair_sq",
+    "points_injective",
+    "points_not_collinear",
+    "points_not_cospherical",
+    "pairFromLabel_label",
+    "pairFromLabel_injective",
+    "pairFromLabel_surjective",
+    "label_card",
+    "lengths_pos",
+    "lengths_sq",
+    "lengths_injective",
+    "distance_of_label",
+    "distance_multiplicity",
+    "distanceSet_eq",
+    "distanceSet_card",
+    "multiplicity_profile",
+    "full_family",
+    "unbounded_counterexamples",
+    "no_eventual_line_or_circle_classification",
+    "pointSet_card",
+    "pointSet_coe",
+    "orientedPair_injective",
+    "orientedPair_mem",
+    "orientedPair_dist",
+    "orientedPair_surjective",
+    "finiteDistances_eq",
+    "finiteMultiplicity_eq",
+    "finite_counterexamples",
+    "equidistant_line_collinear",
+    "equidistant_circle_cospherical",
+    "original_classification_false"
+  ],
+  "mutations": {
+    "duplicate_arc_points": [
+      "if i.val = 0 then 0 else arc ((i.val - 1 : ℕ) * angle m)",
+      "if i.val = 0 then 0 else arc (0 * angle m)"
+    ],
+    "wrong_multiplicity": [
+      "multiplicity (points m) (lengths m k) = m-k.val := by",
+      "multiplicity (points m) (lengths m k) = m-k.val+1 := by"
+    ],
+    "double_count_ordered_pairs": [
+      "(A.offDiag.filter (fun p => dist p.1 p.2 = d)).card / 2",
+      "(A.offDiag.filter (fun p => dist p.1 p.2 = d)).card"
+    ]
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "status": "LOCAL_VERIFIED_NOT_OFFICIALLY_REVIEWED",
+  "problem_id": "Erdos 958 (catalog correspondence requested)",
+  "scope": "Full eventual equidistant-line-or-circle classification is false; explicit counterexamples for every n>=4, literal finite-set distance and unordered-pair multiplicities.",
+  "checked_at_utc": "2026-09-17T03:01:34.787458+00:00",
+  "completed_at_utc": "2026-09-17T03:07:13.420992+00:00",
+  "lean_version": "Lean (version 4.34.0, arm64-apple-darwin24.6.0, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)",
+  "dependency_pins": {
+    "mathlib": "5ed2965256430c3649e86755f9576b54eca72435",
+    "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+    "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+    "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+    "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+    "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+    "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+    "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+    "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+  },
+  "clean_project_rebuild": true,
+  "full_fresh_kernel_replay": true,
+  "independent_checker_implementation": false,
+  "independent_human_review": false,
+  "full_dependency_source_rebuild": false,
+  "audited_theorem_count": 41,
+  "axioms": {
+    "Erdos958.dist_sq_coords": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.arc_dist_sq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.arc_origin_sq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.angle_pos": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.angle_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.sqLen_pos": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.sqLen_lt_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.sqLen_strictMono": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.points_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.points_pos": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.points_pair_sq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.points_injective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.points_not_collinear": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.points_not_cospherical": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.pairFromLabel_label": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.pairFromLabel_injective": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Erdos958.pairFromLabel_surjective": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Erdos958.label_card": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.lengths_pos": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.lengths_sq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.lengths_injective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.distance_of_label": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.distance_multiplicity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.distanceSet_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.distanceSet_card": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.multiplicity_profile": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.full_family": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.unbounded_counterexamples": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.no_eventual_line_or_circle_classification": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.pointSet_card": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.pointSet_coe": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.orientedPair_injective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.orientedPair_mem": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.orientedPair_dist": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.orientedPair_surjective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.finiteDistances_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.finiteMultiplicity_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.finite_counterexamples": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.equidistant_line_collinear": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.equidistant_circle_cospherical": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos958.original_classification_false": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "negative_controls": {
+    "false_arithmetic": {
+      "exit_code": 1,
+      "status": "REJECTED_BY_LEAN"
+    },
+    "placeholder": {
+      "exit_code": 0,
+      "status": "REJECTED_BY_AXIOM_AUDIT"
+    },
+    "custom_axiom": {
+      "exit_code": 0,
+      "status": "REJECTED_BY_AXIOM_AUDIT"
+    },
+    "duplicate_arc_points": {
+      "exit_code": 1,
+      "status": "REJECTED_BY_LEAN"
+    },
+    "wrong_multiplicity": {
+      "exit_code": 1,
+      "status": "REJECTED_BY_LEAN"
+    },
+    "double_count_ordered_pairs": {
+      "exit_code": 1,
+      "status": "REJECTED_BY_LEAN"
+    }
+  },
+  "files": {
+    "Erdos958.lean": {
+      "sha256": "9b541cc02d986b333ca479b42e895529a07541dd4415f6665265967fbfebd195",
+      "bytes": 25929
+    },
+    "lean-toolchain": {
+      "sha256": "8733782dc070a99b312039cda424f601b80f3be6f6f512627da5ba25adc27632",
+      "bytes": 25
+    },
+    "lakefile.toml": {
+      "sha256": "6e65f86dcdde9a14aed6307f8eb333e859ec965bce88079d7bafc5ae01bd0d7b",
+      "bytes": 238
+    },
+    "lake-manifest.json": {
+      "sha256": "6b2180a11a0501a77726540a81cbd082bbf6bb414e68b0dd4823039fad62a9bd",
+      "bytes": 3542
+    },
+    "verification-config.json": {
+      "sha256": "caad7a1480748c188662b2d65ca28b7a0abf94d22928567de350578fcd472e55",
+      "bytes": 2128
+    },
+    "scripts/verify.py": {
+      "sha256": "6d5516f38390852532a94b0407ea732a493faeb3b9d321c48de8c5cb19a6a9e1",
+      "bytes": 8513
+    }
+  },
+  "novel_mathematical_discovery": false,
+  "formalization_priority": "NOT_ESTABLISHED",
+  "award_eligibility": "UNDETERMINED"
+}

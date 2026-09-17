@@ -1,0 +1,17 @@
+test_actual_inventory_and_imports (test_verify.AuditTests.test_actual_inventory_and_imports) ... ok
+test_axiom_free (test_verify.AuditTests.test_axiom_free) ... ok
+test_literal_geometry_and_full_quantifiers (test_verify.AuditTests.test_literal_geometry_and_full_quantifiers) ... ok
+test_missing_or_duplicate (test_verify.AuditTests.test_missing_or_duplicate) ... ok
+test_mutations_are_unique_and_current (test_verify.AuditTests.test_mutations_are_unique_and_current) ... ok
+test_source_shortcuts_rejected (test_verify.AuditTests.test_source_shortcuts_rejected) ... ok
+test_standard_axioms (test_verify.AuditTests.test_standard_axioms) ... ok
+test_unapproved_axioms (test_verify.AuditTests.test_unapproved_axioms) ... ok
+test_duplicate_points_fail_injectivity (test_verify.CombinatorialCrossChecks.test_duplicate_points_fail_injectivity) ... ok
+test_every_label_and_all_orientations (test_verify.CombinatorialCrossChecks.test_every_label_and_all_orientations) ... ok
+test_label_inverse_bijection (test_verify.CombinatorialCrossChecks.test_label_inverse_bijection) ... ok
+test_numeric_metric_sanity_only (test_verify.CombinatorialCrossChecks.test_numeric_metric_sanity_only) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.025s
+
+OK

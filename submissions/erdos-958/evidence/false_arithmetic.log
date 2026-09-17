@@ -1,0 +1,3 @@
+$NEGATIVE_FIXTURE/false_arithmetic.lean:2:34: error: Tactic `decide` proved that the proposition
+  2 = 3
+is false
