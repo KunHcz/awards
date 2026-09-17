@@ -14,6 +14,11 @@ presentation. It has its own pinned Lean 4.33.1 package and verification.
 It is not the unrestricted theorem or a second claim for the earlier work.
 The scope described below is the original analytic snapshot.
 
+The later [orientability extension](ORIENTABILITY_EXTENSION.md) adds the
+orientation-double-cover and positive-tangent-frame proof for general
+simply connected C1 three-manifolds. It is pinned and verified separately;
+the original sources and earlier evidence are not replaced.
+
 ## Original analytic snapshot
 
 This is a **self-submitted proof and evidence package for award-intake and
