@@ -1,10 +1,20 @@
-# JSP-000007: Dini comparison and the scalar extinction component
+# JSP-000007: analytic, topological, and restricted geometric formalizations
 
 **Extended submission:** the [additive topology supplement](TOPOLOGY_EXTENSION.md)
 provides an immutable 45-theorem upstream snapshot, including three additional
 topological endgame components, and a separate executable verifier. The original
 15-theorem analytic package described below remains unchanged and reproducible.
 Neither version proves the full Poincare theorem.
+
+**Additional geometric case:** the separate
+[constant-positive-curvature component](constant-curvature/README.md)
+proves the sphere conclusion with an explicit genuine constant-positive-
+sectional-curvature metric hypothesis, without assuming a spherical
+presentation. It has its own pinned Lean 4.33.1 package and verification.
+It is not the unrestricted theorem or a second claim for the earlier work.
+The scope described below is the original analytic snapshot.
+
+## Original analytic snapshot
 
 This is a **self-submitted proof and evidence package for award-intake and
 eligibility review**, related to the [Poincare conjecture entry](../../problems/catalog-0001-0100.md#JSP-000007).
