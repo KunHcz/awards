@@ -1,8 +1,0 @@
-'JustinSunPrize.JSP000489.fresh_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000489.history_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000489.picked_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000489.picked_ne_of_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000489.picked_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000489.infinitely_many_each_color' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000489.finite_color_splitting' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000489.bernstein_propertyB' depends on axioms: [propext, Classical.choice, Quot.sound]
