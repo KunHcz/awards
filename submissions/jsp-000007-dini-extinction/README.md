@@ -1,5 +1,11 @@
 # JSP-000007: Dini comparison and the scalar extinction component
 
+**Extended submission:** the [additive topology supplement](TOPOLOGY_EXTENSION.md)
+provides an immutable 45-theorem upstream snapshot, including three additional
+topological endgame components, and a separate executable verifier. The original
+15-theorem analytic package described below remains unchanged and reproducible.
+Neither version proves the full Poincare theorem.
+
 This is a **self-submitted proof and evidence package for award-intake and
 eligibility review**, related to the [Poincare conjecture entry](../../problems/catalog-0001-0100.md#JSP-000007).
 It contains complete Lean proofs of three analytic steps used in a
