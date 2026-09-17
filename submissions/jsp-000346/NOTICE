@@ -11,7 +11,10 @@ https://github.com/google-deepmind/formal-conjectures
 
 The local adjacent-product observation and the comparison bound are credited
 to Kyle Pratt, Proposition 7.1 of A digested proof of Erdős Problem #421.
-The disjoint-triple strengthening and its Lean proofs were developed here
-with ChatGPT assistance. Global priority is not established.
+The disjoint-triple, retained-successor and minimal-block-crossing arguments
+and their Lean proofs were developed here with ChatGPT assistance.
+The earlier public coefficient-one/fourth-root result in green3sf's PR #470
+is acknowledged in PRIOR_ART.md; none of its code is imported or copied.
+Global priority is not established.
 The original paper is linked, not redistributed. Third-party source rights
 and authorship remain with their respective holders.

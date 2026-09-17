@@ -1,3 +1,9 @@
+$NEGATIVE_FIXTURE/wrong_retained_successor.lean:286:44: error: unsolved goals
+d : ℕ → ℕ
+hd : StrictMono d
+i : ℕ
+hx : d i ∈ Set.range d
+⊢ d i * d (i + 2) = d i * d (i + 1)
 'JustinSunPrize.JSP000346.consecutive_indices' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.block_products_avoid_adjacent' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.index_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -20,17 +26,22 @@
 'JustinSunPrize.JSP000346.exists_above' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.below_cut_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.retained_successor_le' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.retainedHole_at' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.retainedHole_at' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.retained_product_large' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.retainedHole_missing' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.retainedHole_in_range' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.retainedHole_injOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.retainedHole_missing' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.retainedHole_in_range' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.retainedHole_injOn' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.retainedDomain_card' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.product_distinct_full_root_integral' depends on axioms: [propext,
+ sorryAx,
  Classical.choice,
  Quot.sound]
-'JustinSunPrize.JSP000346.product_distinct_full_root_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.product_distinct_full_root_real' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
 'JustinSunPrize.JSP000346.product_distinct_full_root_eventually' depends on axioms: [propext,
+ sorryAx,
  Classical.choice,
  Quot.sound]
 'JustinSunPrize.JSP000346.blockProduct_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

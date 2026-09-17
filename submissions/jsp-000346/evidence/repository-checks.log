@@ -32,6 +32,6 @@ test_unknown_payment_field_rejected (test_records.RecordTests.test_unknown_payme
 test_verification_requires_consistent_successful_evidence (test_records.RecordTests.test_verification_requires_consistent_successful_evidence) ... ok
 
 ----------------------------------------------------------------------
-Ran 22 tests in 3.386s
+Ran 22 tests in 5.498s
 
 OK

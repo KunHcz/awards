@@ -1,37 +1,51 @@
-# Statement correspondence
+# Statement correspondence and verification boundaries
 
-## Original problem and claimed component
+## Original question
 
-The official [JSP-000346 catalog entry](https://github.com/TheJustinSunPrize/awards/blob/f4e7173d89dfe91022a185427d63452c8ffbf6ae/problems/catalog-0301-0400.md#JSP-000346) asks for a strictly increasing density-one sequence whose products over different nonempty consecutive blocks are distinct. The corresponding reference statement is [Erdős 421](https://github.com/google-deepmind/formal-conjectures/blob/40e7c98697de6f66b8cbdbf641749ab39ed9c152/FormalConjectures/ErdosProblems/421.lean).
+[JSP-000346](https://github.com/TheJustinSunPrize/awards/blob/f4e7173d89dfe91022a185427d63452c8ffbf6ae/problems/catalog-0301-0400.md#JSP-000346) asks for an increasing density-one sequence with distinct products over different nonempty consecutive blocks. The [reference Erdős 421 statement](https://github.com/google-deepmind/formal-conjectures/blob/40e7c98697de6f66b8cbdbf641749ab39ed9c152/FormalConjectures/ErdosProblems/421.lean) supplies the interval predicate.
 
-This package proves a necessary quantitative restriction on **every** such sequence, and more generally on every set satisfying the adjacent-product obstruction. It does not prove the density-one existence statement. It requests review as a scoped quantitative contribution, without changing the catalog's solution or eligibility flags.
+This package proves necessary omission bounds, **not the existence statement**. The final results assume only `StrictMono d` and `DistinctBlockProducts d`. They assume no density, prime-distribution estimate, omission bound or unproved external mathematical result.
 
-## Definitions and hypotheses
+`DistinctBlockProducts d` is injectivity of `(u,v) -> product_{i in [u,v]} d(i)` on pairs satisfying `u<=v`. Endpoints are included and blocks are nonempty. `missing B N` is the actual interval `[1,N]` filtered by nonmembership; zero is not counted. The source definition retains attribution in NOTICE.
 
-`DistinctBlockProducts d` is injectivity of the interval-product function on pairs `(u,v)` with `u <= v`. Thus intervals are nonempty, include both endpoints, and are distinguished by both their starting and ending indices. A singleton block and a two-element block are different. The predicate is adapted from the pinned reference statement, with its attribution retained in NOTICE.
+## Three arguments in one package
 
-`block_products_avoid_adjacent` uses strict monotonicity to show that values `a` and `a+1` must have consecutive indices. It then compares their two-term product with the singleton containing `a(a+1)`. The local obstruction is derived, not assumed about the original sequence.
+| Part | Declarations | Exact scope |
+| --- | --- | --- |
+| Initial 17 theorems | `consecutive_indices` through `product_distinct_half_root` | Local ambient adjacent-product obstruction; coefficient `1/2` with fourth-root error. |
+| Retained-successor extension, 14 theorems | `retained_product_not_mem` through `product_distinct_full_root_eventually` | Original full block condition; coefficient `1`, fourth-root error, and an explicit eventual theorem for every positive epsilon. |
+| Minimal-crossing extension, 23 theorems | `blockProduct_zero` through `omission_example_one_trillion` | Original full block condition; logarithmic error and the sharper factorial-parameter bound, including two exact numerical corollaries. |
 
-`missing B N` is the filter of the actual natural-number interval `[1,N]` by nonmembership in `B`. It never counts zero. `omittedCount` is its cardinality. Finite natural subtraction and integer square roots are handled before the conversion to real inequalities.
+The 54 theorem declarations are proof components, not 54 independently solved problems.
 
-No `HasDensity` hypothesis, analytic conjecture, prime distribution estimate, geometric counting theorem, or external proof package is assumed. The final results do not need the reference statement's extra positive-first-term hypothesis; they therefore apply to its sequences in particular. Neither `False` nor the desired omission bound appears as an assumption.
+## Minimal-crossing theorem map
 
-## Proof map
+`blockProduct_interval` equates the finite prefix product with the original closed index interval. `retained_term_two_le` derives exclusion of zero and one from the original hypothesis. `retained_term_index_lower`, `blockProduct_factorial_lower` and `blockProduct_power_lower` supply proved lower bounds for every start.
 
-| Theorems | Role |
-| --- | --- |
-| `consecutive_indices`, `block_products_avoid_adjacent` | Connect the literal consecutive-block condition to the local obstruction. |
-| `index_bounds`, `pairProduct_strictMono` | Place all selected triples within the cutoff and separate the small endpoints from all products. |
-| `hole_cases`, `hole_not_mem`, `hole_mem_missing`, `holes_injective` | Choose real omissions and prove that no two selected triples use the same omission. |
-| `indices_card`, `omission_bound_nat`, `omission_bound_integral` | Exact finite counting, including empty intervals and small cutoffs. |
-| `nat_sqrt_le_real`, `real_sqrt_lt_nat_succ`, `omission_bound_real` | Convert the integer bound to the explicit real fourth-root-error inequality. |
-| `omission_bound_eventually` | For every positive error tolerance, prove the bound at all sufficiently large cutoffs. |
-| `product_distinct_omission_bound`, `product_distinct_half_root` | Final statements under the original sequence condition. |
+`crossing_exists`, `crossing_spec`, `crossing_min` and `crossing_le` define and control the **first** prefix product exceeding a cutoff. `crossing_two_le` rules out a singleton. `crossingDomain_room` guarantees enough retained factors remain below the cutoff, after excluding at most `L-1` terminal starts.
 
-The complete declaration inventory and axiom reports are included in the verification configuration and evidence. These 17 declarations form one contribution, not 17 separate problems.
+`crossing_product_missing` uses the original interval injectivity, not a weaker local hypothesis. `crossing_product_upper` bounds the first crossing by `M^2`. `crossingHole_injective` handles missing/missing, retained/retained and mixed pairs. `block_crossing_omission` injects the actual finite domain into omissions at the original cutoff `N`.
 
-## Checks and boundaries
+The two principal specializations are:
 
-The semantic mutations collapse different hole choices, remove the scale-separation cutoff, and demand an unsupported coefficient-one bound. Each must fail. Exact bounded hitting-set tests independently check the local counting problem; finite prime and rapidly increasing power sequences exercise the block definition, while `{2,4,8}` shows that the local condition is genuinely weaker than full product-distinctness.
+```text
+product_distinct_factorial_error:
+  floor(sqrt N) < (L+1)! -> floor(sqrt N) <= E(N) + (L-1)
 
-The coefficient-one counterexample in the Python tests is a **finite local-obstruction set**, not a product-distinct sequence and not a counterexample to Pratt's density-one bound. No optimality assertion follows from that test. The tests are diagnostic; the universal theorems are Lean proofs.
+product_distinct_logarithmic_error:
+  floor(sqrt N) <= E(N) + Nat.log 2 (floor(sqrt N))
+```
+
+`L-1` is natural subtraction. Both theorems include `N=0`; `Nat.log 2 0=0`. The factorial condition may hold with `L=0` only when the square-root cutoff is zero, so no positive-domain crossing is asserted in that case. The explicit examples are kernel-checked consequences, not substituted test data.
+
+## Why hypothesis distinctions matter
+
+`AvoidsAdjacentProduct` concerns ambient consecutive integers. The full property instead concerns consecutive retained values, even across gaps. `{2,4,8}` satisfies the former but violates the latter. The earlier negative control asking for coefficient one under only the weaker local condition remains applicable.
+
+The new proof needs minimality and terminal-start removal. Multiplying past the first crossing can leave `[1,N]`; allowing a terminal start can require a factor above `M`. Two additional proof mutations exercise these failures. The full suite also rejects false arithmetic, proof placeholders and custom axioms. A failed mutation establishes rejection of that proof, not impossibility of every potentially stronger mathematical statement.
+
+## Tests and review limits
+
+Independent Python checks examine every subset of `{2,...,12}` satisfying the finite original block condition, greedy finite prefixes and exact crossing images. All numerical arithmetic is integral. These finite diagnostics do not establish the universal theorem; Lean does.
+
+A fresh replay uses the same Lean kernel implementation, not an independent human or independently implemented checker. The package neither establishes global priority nor proves optimality, attainability or the density-one existence construction. Official record flags and million-dollar work are untouched.

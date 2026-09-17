@@ -1,3 +1,41 @@
+$NEGATIVE_FIXTURE/removed_crossing_tail.lean:515:68: warning: Variable name `L` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _L
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+$NEGATIVE_FIXTURE/removed_crossing_tail.lean:529:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  f ≥ 1
+  e ≥ 0
+  c ≥ 0
+  c - e - f ≥ 0
+  b ≥ 0
+  b - f ≤ -1
+  a ≥ 0
+  a + b - c ≥ 0
+where
+ a := ↑(Finset.Icc 1 M \ Finset.image (fun j => d (cutIndex d hd M - 1 - j)) (Finset.range (L - 1))).card
+ b := ↑(Finset.image (fun j => d (cutIndex d hd M - 1 - j)) (Finset.range (L - 1))).card
+ c := ↑M
+ e := ↑(Finset.Icc 1 M \ Finset.image (fun j => d (cutIndex d hd M - 1 - j)) (Finset.range 0)).card
+ f := ↑L
+$NEGATIVE_FIXTURE/removed_crossing_tail.lean:539:81: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  f ≥ 0
+  e ≥ 0
+  e - f ≥ 2
+  c ≥ 0
+  c + f ≥ -1
+  b ≥ 0
+  a ≥ 0
+  a - b ≥ 0
+where
+ a := ↑M
+ b := ↑(d i)
+ c := ↑i
+ e := ↑L
+ f := ↑(cutIndex d hd M - (1 + i))
 'JustinSunPrize.JSP000346.consecutive_indices' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.block_products_avoid_adjacent' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.index_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -45,16 +83,26 @@
 'JustinSunPrize.JSP000346.crossing_min' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.crossing_le' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.crossing_two_le' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.crossingDomain_card' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.crossingDomain_room' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.crossingDomain_card' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.crossingDomain_room' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.crossingHole_at' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.crossing_product_missing' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.crossing_product_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.crossing_product_upper' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.crossingHole_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.block_crossing_omission' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.product_distinct_factorial_error' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.product_distinct_logarithmic_error' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.omission_example_one_hundred_million' depends on axioms: [propext,
+'JustinSunPrize.JSP000346.block_crossing_omission' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.product_distinct_factorial_error' depends on axioms: [propext,
+ sorryAx,
  Classical.choice,
  Quot.sound]
-'JustinSunPrize.JSP000346.omission_example_one_trillion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.product_distinct_logarithmic_error' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'JustinSunPrize.JSP000346.omission_example_one_hundred_million' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'JustinSunPrize.JSP000346.omission_example_one_trillion' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

@@ -1,3 +1,23 @@
+$NEGATIVE_FIXTURE/nonminimal_crossing.lean:497:2: error: Type mismatch
+  Nat.find_spec (crossing_exists d hprod i M)
+has type
+  M < blockProduct d i (Nat.find ⋯)
+but is expected to have type
+  M < blockProduct d i (crossingLength d hprod i M)
+$NEGATIVE_FIXTURE/nonminimal_crossing.lean:501:63: error: Application type mismatch: The argument
+  hl
+has type
+  l < crossingLength d hprod i M
+but is expected to have type
+  l < Nat.find ⋯
+in the application
+  Nat.find_min (crossing_exists d hprod i M) hl
+$NEGATIVE_FIXTURE/nonminimal_crossing.lean:505:2: error: Type mismatch
+  Nat.find_min' (crossing_exists d hprod i M) hL
+has type
+  Nat.find ⋯ ≤ L
+but is expected to have type
+  crossingLength d hprod i M ≤ L
 'JustinSunPrize.JSP000346.consecutive_indices' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.block_products_avoid_adjacent' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.index_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -41,20 +61,30 @@
 'JustinSunPrize.JSP000346.blockProduct_factorial_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.blockProduct_power_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.crossing_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.crossing_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.crossing_min' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.crossing_le' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.crossing_two_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.crossing_spec' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.crossing_min' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.crossing_le' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.crossing_two_le' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.crossingDomain_card' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.crossingDomain_room' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.crossingHole_at' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.crossing_product_missing' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.crossing_product_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.crossingHole_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.block_crossing_omission' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.product_distinct_factorial_error' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.product_distinct_logarithmic_error' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.omission_example_one_hundred_million' depends on axioms: [propext,
+'JustinSunPrize.JSP000346.crossing_product_missing' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.crossing_product_upper' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.crossingHole_injective' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.block_crossing_omission' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.product_distinct_factorial_error' depends on axioms: [propext,
+ sorryAx,
  Classical.choice,
  Quot.sound]
-'JustinSunPrize.JSP000346.omission_example_one_trillion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.product_distinct_logarithmic_error' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'JustinSunPrize.JSP000346.omission_example_one_hundred_million' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'JustinSunPrize.JSP000346.omission_example_one_trillion' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

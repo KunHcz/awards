@@ -1,3 +1,40 @@
+$NEGATIVE_FIXTURE/omit_last_exception.lean:277:46: warning: Variable name `hd` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hd
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+$NEGATIVE_FIXTURE/omit_last_exception.lean:315:50: error: Application type mismatch: The argument
+  hlast
+has type
+  d i ≠ 0
+but is expected to have type
+  d i ≠ d (cutIndex d hd M - 1)
+in the application
+  retained_successor_le d hd M i hhi hlast
+$NEGATIVE_FIXTURE/omit_last_exception.lean:355:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 1
+  b - c ≥ 2
+  a ≥ 0
+  a + b ≥ 0
+where
+ a := ↑M.sqrt
+ b := ↑(M + 1 - (M.sqrt + 1))
+ c := ↑((Finset.Icc (M.sqrt + 1) M).erase 0).card
+$NEGATIVE_FIXTURE/omit_last_exception.lean:356:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (Finset.Icc (M.sqrt + 1) M).erase (d (cutIndex d hd M - 1))
+in the target expression
+  M ≤ ((Finset.Icc (M.sqrt + 1) M).erase 0).card + M.sqrt + 1
+
+case neg
+d : ℕ → ℕ
+hd : StrictMono d
+M : ℕ
+hs : M.sqrt ≤ M
+ht : d (cutIndex d hd M - 1) ∉ Finset.Icc (M.sqrt + 1) M
+⊢ M ≤ ((Finset.Icc (M.sqrt + 1) M).erase 0).card + M.sqrt + 1
 'JustinSunPrize.JSP000346.consecutive_indices' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.block_products_avoid_adjacent' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.index_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -23,14 +60,19 @@
 'JustinSunPrize.JSP000346.retainedHole_at' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.retained_product_large' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.retainedHole_missing' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.retainedHole_in_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.retainedHole_in_range' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.retainedHole_injOn' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.retainedDomain_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.retainedDomain_card' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.product_distinct_full_root_integral' depends on axioms: [propext,
+ sorryAx,
  Classical.choice,
  Quot.sound]
-'JustinSunPrize.JSP000346.product_distinct_full_root_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.product_distinct_full_root_real' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
 'JustinSunPrize.JSP000346.product_distinct_full_root_eventually' depends on axioms: [propext,
+ sorryAx,
  Classical.choice,
  Quot.sound]
 'JustinSunPrize.JSP000346.blockProduct_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

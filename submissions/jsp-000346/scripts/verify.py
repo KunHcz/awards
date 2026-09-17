@@ -168,7 +168,7 @@ def main() -> None:
                   independent_human_review=False, full_dependency_source_rebuild=False,
                   audited_theorem_count=len(axioms), axioms=axioms, negative_controls=negatives,
                   files=files, novel_mathematical_discovery='NOT_ESTABLISHED',
-                  mathematical_contribution='Independent strengthening of the unconditional bound displayed in Pratt Proposition 7.1 from coefficient 1/3 to 1/2; worldwide priority is not established.',
+                  mathematical_contribution='Minimal block crossings give unconditional coefficient 1 with a logarithmic error and a sharper exact inverse-factorial parameter bound. This strengthens the pinned Pratt Proposition 7.1 comparison and the earlier half-root submission. Worldwide priority, attainability and optimality are not established.',
                   formalization_priority='NOT_ESTABLISHED', award_eligibility='UNDETERMINED')
     (out / 'verification.json').write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps(report, indent=2))

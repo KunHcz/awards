@@ -2,10 +2,12 @@
   "module": "JSP346",
   "namespace": "JustinSunPrize.JSP000346",
   "problem_id": "JSP-000346 / Erdos 421",
-  "scope": "Unconditional omission bound E(N) >= sqrt(N)/2 - fourthRoot(N)/2 - 3/2, hence eventual coefficient 1/2; not the density-one existence theorem or an optimality claim.",
+  "scope": "For the original distinct-block-product condition, M=floor(sqrt N) satisfies M <= E(N)+(L-1) whenever M < (L+1)!, and M <= E(N)+floor(log_2 M) for every N. No density hypothesis. The earlier coefficient-one/fourth-root and weaker local half-root bounds are retained. Neither density-one existence nor optimality is claimed.",
   "imports": [
     "Mathlib.Tactic",
-    "Mathlib.Data.Nat.Sqrt"
+    "Mathlib.Data.Nat.Sqrt",
+    "Mathlib.Data.Nat.Factorial.BigOperators",
+    "Mathlib.Data.Nat.Log"
   ],
   "theorems": [
     "consecutive_indices",
@@ -24,7 +26,44 @@
     "omission_bound_real",
     "omission_bound_eventually",
     "product_distinct_omission_bound",
-    "product_distinct_half_root"
+    "product_distinct_half_root",
+    "retained_product_not_mem",
+    "retained_products_strictMono",
+    "exists_above",
+    "below_cut_iff",
+    "retained_successor_le",
+    "retainedHole_at",
+    "retained_product_large",
+    "retainedHole_missing",
+    "retainedHole_in_range",
+    "retainedHole_injOn",
+    "retainedDomain_card",
+    "product_distinct_full_root_integral",
+    "product_distinct_full_root_real",
+    "product_distinct_full_root_eventually",
+    "blockProduct_zero",
+    "blockProduct_succ",
+    "blockProduct_interval",
+    "retained_term_two_le",
+    "retained_term_index_lower",
+    "blockProduct_factorial_lower",
+    "blockProduct_power_lower",
+    "crossing_exists",
+    "crossing_spec",
+    "crossing_min",
+    "crossing_le",
+    "crossing_two_le",
+    "crossingDomain_card",
+    "crossingDomain_room",
+    "crossingHole_at",
+    "crossing_product_missing",
+    "crossing_product_upper",
+    "crossingHole_injective",
+    "block_crossing_omission",
+    "product_distinct_factorial_error",
+    "product_distinct_logarithmic_error",
+    "omission_example_one_hundred_million",
+    "omission_example_one_trillion"
   ],
   "mutations": {
     "collapsed_choice": [
@@ -38,6 +77,26 @@
     "unsupported_coefficient_one": [
       "Nat.sqrt N ≤ 2 * omittedCount B N + Nat.sqrt (Nat.sqrt N) + 2",
       "Nat.sqrt N ≤ omittedCount B N + Nat.sqrt (Nat.sqrt N) + 2"
+    ],
+    "omit_last_exception": [
+      "(Finset.Icc (Nat.sqrt M + 1) M).erase (d (cutIndex d hd M - 1))",
+      "(Finset.Icc (Nat.sqrt M + 1) M).erase 0"
+    ],
+    "wrong_retained_successor": [
+      "x * d (Function.invFun d x + 1) else x",
+      "x * d (Function.invFun d x + 2) else x"
+    ],
+    "missing_retained_scale_separation": [
+      "(Finset.Icc (Nat.sqrt M + 1) M).erase",
+      "(Finset.Icc 2 M).erase"
+    ],
+    "nonminimal_crossing": [
+      "(i M : ℕ) : ℕ := Nat.find (crossing_exists d hprod i M)",
+      "(i M : ℕ) : ℕ := Nat.find (crossing_exists d hprod i M) + 1"
+    ],
+    "removed_crossing_tail": [
+      "(Finset.Icc 1 M) \\ ((Finset.range (L-1)).image",
+      "(Finset.Icc 1 M) \\ ((Finset.range 0).image"
     ]
   }
 }

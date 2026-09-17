@@ -1,3 +1,77 @@
+$NEGATIVE_FIXTURE/missing_retained_scale_separation.lean:316:51: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  h ≥ 0
+  g ≥ 0
+  f ≥ 0
+  e ≥ 2
+  e - g ≤ 0
+  e - h ≤ -1
+  c ≥ 1
+  c - e ≥ 0
+  c - f ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b ≥ 0
+  a - c ≥ 0
+where
+ a := ↑N
+ b := ↑M * ↑M
+ c := ↑M
+ e := ↑(d i)
+ f := ↑(d (i + 1))
+ g := ↑M.sqrt
+ h := ↑(d (cutIndex d hd M - 1))
+$NEGATIVE_FIXTURE/missing_retained_scale_separation.lean:337:50: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  c ≥ 2
+  c - e ≤ 0
+  b ≥ 2
+  a ≥ 0
+  a - b ≥ 0
+  a - c ≥ 0
+where
+ a := ↑M
+ b := ↑(d i) * ↑(d (i + 1))
+ c := ↑(d i)
+ e := ↑M.sqrt
+$NEGATIVE_FIXTURE/missing_retained_scale_separation.lean:343:50: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  c ≥ 2
+  c - e ≤ 0
+  b ≥ 2
+  a ≥ 0
+  a - b ≥ 0
+  a - c ≥ 0
+where
+ a := ↑M
+ b := ↑(d j) * ↑(d (j + 1))
+ c := ↑(d j)
+ e := ↑M.sqrt
+$NEGATIVE_FIXTURE/missing_retained_scale_separation.lean:355:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 1
+  b - c ≥ 2
+  a ≥ 0
+  a + b ≥ 0
+where
+ a := ↑M.sqrt
+ b := ↑(M + 1 - (M.sqrt + 1))
+ c := ↑((Finset.Icc 2 M).erase (d (cutIndex d hd M - 1))).card
+$NEGATIVE_FIXTURE/missing_retained_scale_separation.lean:356:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (Finset.Icc (M.sqrt + 1) M).erase (d (cutIndex d hd M - 1))
+in the target expression
+  M ≤ ((Finset.Icc 2 M).erase (d (cutIndex d hd M - 1))).card + M.sqrt + 1
+
+case neg
+d : ℕ → ℕ
+hd : StrictMono d
+M : ℕ
+hs : M.sqrt ≤ M
+ht : d (cutIndex d hd M - 1) ∉ Finset.Icc (M.sqrt + 1) M
+⊢ M ≤ ((Finset.Icc 2 M).erase (d (cutIndex d hd M - 1))).card + M.sqrt + 1
 'JustinSunPrize.JSP000346.consecutive_indices' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.block_products_avoid_adjacent' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.index_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -23,14 +97,19 @@
 'JustinSunPrize.JSP000346.retainedHole_at' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.retained_product_large' depends on axioms: [propext, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.retainedHole_missing' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.retainedHole_in_range' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.retainedHole_injOn' depends on axioms: [propext, Classical.choice, Quot.sound]
-'JustinSunPrize.JSP000346.retainedDomain_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.retainedHole_in_range' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.retainedHole_injOn' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.retainedDomain_card' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 'JustinSunPrize.JSP000346.product_distinct_full_root_integral' depends on axioms: [propext,
+ sorryAx,
  Classical.choice,
  Quot.sound]
-'JustinSunPrize.JSP000346.product_distinct_full_root_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.product_distinct_full_root_real' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
 'JustinSunPrize.JSP000346.product_distinct_full_root_eventually' depends on axioms: [propext,
+ sorryAx,
  Classical.choice,
  Quot.sound]
 'JustinSunPrize.JSP000346.blockProduct_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
