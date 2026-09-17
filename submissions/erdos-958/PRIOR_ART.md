@@ -22,6 +22,14 @@ The theorem in that snapshot is a statement with an unfilled proof, not a comple
 
 On 17 September 2026, exact original-problem-number searches in the prize repository and a GitHub Lean-code search for `Erdos958` returned no matching submission/proof. The official PR title/body snapshot used in initial selection contained 226 records. These are limited indexed searches, not an exhaustive equivalence check of every proof or a worldwide priority guarantee. The final source and PR checks are recorded in `evidence/prior-art-check.json`.
 
+### Existing four-point formalization found in follow-up review
+
+A subsequent direct source check found the following existing proof, whose header credits **Aristotle and Boris Alexeev**:
+
+<https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/v4.29.1/ErdosProblems/Erdos958.lean>
+
+That file proves the distance profile and failure of line/circle classification for four named points. Its final `not_erdos_958` refutes a classification quantified over all finite sets. This package instead constructs counterexamples for every `n >= 4` and directly refutes the **eventual** classification for all sufficiently large sizes. The difference is the cardinality quantifier, not a claim that no previous Lean work existed. No proof code was copied from that file. It was inspected for this scope comparison, not rebuilt here. Its authors retain their formalization credit; our initial negative keyword-search result does not establish first-formalization priority.
+
 A broader distance-multiplicity search found this relevant scope warning:
 
 <https://github.com/TheJustinSunPrize/awards/issues/57>
