@@ -1,0 +1,43 @@
+{
+  "module": "JSP346",
+  "namespace": "JustinSunPrize.JSP000346",
+  "problem_id": "JSP-000346 / Erdos 421",
+  "scope": "Unconditional omission bound E(N) >= sqrt(N)/2 - fourthRoot(N)/2 - 3/2, hence eventual coefficient 1/2; not the density-one existence theorem or an optimality claim.",
+  "imports": [
+    "Mathlib.Tactic",
+    "Mathlib.Data.Nat.Sqrt"
+  ],
+  "theorems": [
+    "consecutive_indices",
+    "block_products_avoid_adjacent",
+    "index_bounds",
+    "pairProduct_strictMono",
+    "hole_cases",
+    "hole_not_mem",
+    "hole_mem_missing",
+    "holes_injective",
+    "indices_card",
+    "omission_bound_nat",
+    "omission_bound_integral",
+    "nat_sqrt_le_real",
+    "real_sqrt_lt_nat_succ",
+    "omission_bound_real",
+    "omission_bound_eventually",
+    "product_distinct_omission_bound",
+    "product_distinct_half_root"
+  ],
+  "mutations": {
+    "collapsed_choice": [
+      "if 2 * k ∉ B then 2 * k",
+      "if 2 * k ∉ B then 2"
+    ],
+    "missing_scale_separation": [
+      "Finset.Icc (Nat.sqrt r / 2 + 1) ((r - 1) / 2)",
+      "Finset.Icc 1 ((r - 1) / 2)"
+    ],
+    "unsupported_coefficient_one": [
+      "Nat.sqrt N ≤ 2 * omittedCount B N + Nat.sqrt (Nat.sqrt N) + 2",
+      "Nat.sqrt N ≤ omittedCount B N + Nat.sqrt (Nat.sqrt N) + 2"
+    ]
+  }
+}

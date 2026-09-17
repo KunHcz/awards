@@ -1,0 +1,17 @@
+JSP-000346 / Erdős 421 omission-bound contribution
+Copyright 2026 Huang Kun and contributors.
+SPDX-License-Identifier: Apache-2.0
+
+The consecutive-interval product predicate is adapted from:
+FormalConjectures/ErdosProblems/421.lean
+Copyright 2026 The Formal Conjectures Authors.
+Apache License, Version 2.0.
+Source commit: 40e7c98697de6f66b8cbdbf641749ab39ed9c152
+https://github.com/google-deepmind/formal-conjectures
+
+The local adjacent-product observation and the comparison bound are credited
+to Kyle Pratt, Proposition 7.1 of A digested proof of Erdős Problem #421.
+The disjoint-triple strengthening and its Lean proofs were developed here
+with ChatGPT assistance. Global priority is not established.
+The original paper is linked, not redistributed. Third-party source rights
+and authorship remain with their respective holders.

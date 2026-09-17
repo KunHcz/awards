@@ -1,0 +1,59 @@
+{
+  "checked_at_utc": "2026-09-17T04:08:47.178965+00:00",
+  "queries": [
+    {
+      "category": "issues",
+      "query": "repo:TheJustinSunPrize/awards \"JSP-000346\"",
+      "total_count": 0,
+      "items": []
+    },
+    {
+      "category": "issues",
+      "query": "repo:TheJustinSunPrize/awards \"Pratt\" \"omission\"",
+      "total_count": 0,
+      "items": []
+    },
+    {
+      "category": "code",
+      "query": "\"product-distinct\" \"1/2\" language:Lean",
+      "total_count": 0,
+      "items": []
+    }
+  ],
+  "sources": [
+    {
+      "repository": "Robby955/erdos-421-audit",
+      "revision": "318c112c7a70879d98d86d8c3d9a280d77dadb35",
+      "path": "main.tex",
+      "bytes": 30472,
+      "sha256": "3fbfaa5535a141dbeafb7da1761609043474b21080009bfcc426347d953aab43",
+      "pinned_source_checked": true
+    },
+    {
+      "repository": "Animish-Sharma/Erdos",
+      "revision": "5c55362d54cf1f4af2ef2d1110a4c513cba54afd",
+      "path": "421/main.tex",
+      "bytes": 57225,
+      "sha256": "55665f83bf3b7f011bdc89401faeaed0f40e6910a91bc28d785eee99dd83aba0",
+      "pinned_source_checked": true
+    },
+    {
+      "url": "https://www.erdosproblems.com/static/421-Pratt.pdf",
+      "bytes": 442749,
+      "sha256": "7d3852fd9b0eeb2ab9dbecbe9cf2a145b89c060f2e491d8064a823a49d55f8ba"
+    },
+    {
+      "url": "https://www.erdosproblems.com/421",
+      "bytes": 33106,
+      "sha256": "88e75f7eff4d6272e5d238fb2d27f75ef3c279b0f78d0851835b794d0defbb5a"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/421",
+      "bytes": 151943,
+      "sha256": "6a5197b8df252c95fd22040d232ec238d28ddbe41471f8c922266a10b9274ea8"
+    }
+  ],
+  "limits": "Targeted keyword and title/body search plus specified source comparison; not exhaustive proof-equivalence or worldwide priority checking.",
+  "comparison": "Pratt Proposition 7.1 printed pp.17-18: unconditional coefficient 1/3; density-one coefficient 1. This contribution proves unconditional coefficient 1/2.",
+  "global_priority": "NOT_ESTABLISHED"
+}

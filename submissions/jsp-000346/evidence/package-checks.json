@@ -1,0 +1,41 @@
+{
+  "checked_at_utc": "2026-09-17T04:12:44.391912+00:00",
+  "scope": "Only submissions/jsp-000346; no official records or million-dollar projects modified",
+  "proof_and_verifier_digests_match": true,
+  "record_checks": "PASS",
+  "repository_tests": 22,
+  "package_tests": 12,
+  "local_links": [
+    {
+      "document": "README.md",
+      "target": "PRIOR_ART.md"
+    },
+    {
+      "document": "README.md",
+      "target": "JSP346.lean"
+    },
+    {
+      "document": "README.md",
+      "target": "PROOF.md"
+    },
+    {
+      "document": "README.md",
+      "target": "STATEMENT.md"
+    },
+    {
+      "document": "README.md",
+      "target": "evidence/verification.json"
+    },
+    {
+      "document": "README.md",
+      "target": "LICENSE"
+    },
+    {
+      "document": "README.md",
+      "target": "NOTICE"
+    }
+  ],
+  "private_material_scan": "PASS",
+  "files_scanned": 27,
+  "note": "Local checking, not online CI or official review; raw diagnostic trailing whitespace normalized."
+}

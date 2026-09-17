@@ -1,0 +1,51 @@
+$NEGATIVE_FIXTURE/missing_scale_separation.lean:70:57: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 1
+  -2 ≤ 2*b - c ≤ -1
+  a ≥ 1
+  a - b ≤ 0
+  2*a - c ≤ -1
+  2*a - d ≤ 0
+where
+ a := ↑k
+ b := ↑(r - 1) / 2
+ c := ↑r
+ d := ↑r.sqrt
+$NEGATIVE_FIXTURE/missing_scale_separation.lean:130:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 1
+  c ≥ 0
+  b ≥ 1
+  -1 ≤ 2*b - c ≤ 0
+  a ≥ 0
+  a - b ≥ 0
+  -2 ≤ 2*a - d ≤ -1
+where
+ a := ↑(r - 1) / 2
+ b := ↑r.sqrt / 2
+ c := ↑r.sqrt
+ d := ↑r
+'JustinSunPrize.JSP000346.consecutive_indices' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.block_products_avoid_adjacent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.index_bounds' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.pairProduct_strictMono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.hole_cases' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.hole_not_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.hole_mem_missing' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.holes_injective' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.indices_card' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.omission_bound_nat' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.omission_bound_integral' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.nat_sqrt_le_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.real_sqrt_lt_nat_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.omission_bound_real' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.omission_bound_eventually' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.product_distinct_omission_bound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'JustinSunPrize.JSP000346.product_distinct_half_root' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

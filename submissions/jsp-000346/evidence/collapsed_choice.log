@@ -1,0 +1,37 @@
+$NEGATIVE_FIXTURE/collapsed_choice.lean:88:68: error: unsolved goals
+case neg
+B : Set ℕ
+k : ℕ
+h✝ : 2 * k ∉ B
+⊢ k = 1 ∨ 2 = pairProduct k
+$NEGATIVE_FIXTURE/collapsed_choice.lean:98:2: error: unsolved goals
+case pos
+B : Set ℕ
+hB : AvoidsAdjacentProduct B
+k : ℕ
+hk : 1 ≤ k
+h0 : 2 * k ∉ B
+⊢ 2 ∉ B
+'JustinSunPrize.JSP000346.consecutive_indices' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.block_products_avoid_adjacent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.index_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.pairProduct_strictMono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.hole_cases' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.hole_not_mem' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.hole_mem_missing' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.holes_injective' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.indices_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.omission_bound_nat' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.omission_bound_integral' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.nat_sqrt_le_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.real_sqrt_lt_nat_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.omission_bound_real' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.omission_bound_eventually' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'JustinSunPrize.JSP000346.product_distinct_omission_bound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'JustinSunPrize.JSP000346.product_distinct_half_root' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
