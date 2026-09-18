@@ -7,11 +7,37 @@ Contributions maintain the public problem bank, evidence, candidate records, and
 | Type | Include | Handling |
 | --- | --- | --- |
 | Recommend a problem | Precise statement, significance, original references, known results, formalization links | Maintainers check scope, sources and duplicates. |
-| Recommend a recipient | Placeholder or confirmed public ID, contribution description, evidence, related entry | Maintainers review attribution evidence. |
+| Claim an award | Problem-bank link, original Lean proof repository owned by the submitting GitHub account, public follow-up email, contribution role and related claims | Maintainers verify source attribution and the applicant's identity; payment arrangements are handled privately after award confirmation. |
 | Correction | Exact record, current text, proposed correction and supporting sources | Maintainers review the evidence and record the outcome. |
 | Dispute | Announced award, disputed claim, evidence, requested resolution and conflicts | Maintainers record the concern and arrange review. |
 
-Use the corresponding [issue form](.github/ISSUE_TEMPLATE/). Link existing issues instead of duplicating them. Disclose relevant conflicts using public professional information only. Use RECIPIENT-<ENTRY>-A placeholders until recipient identities are confirmed. Never publish unconfirmed identities, private contacts, identity documents, payment details, internal assessment criteria or deliberations, including in commit messages.
+Use the corresponding [issue form](.github/ISSUE_TEMPLATE/). Link existing issues instead of duplicating them. Disclose relevant conflicts using public professional information only. Use RECIPIENT-<ENTRY>-A placeholders until recipient identities are confirmed. Never publish unconfirmed identities, private contacts, identity documents, private financial information, internal assessment criteria or deliberations, including in commit messages. Handle payment arrangements through the maintainer-designated private channel.
+
+The [award claim form](.github/ISSUE_TEMPLATE/claim-award.yml) is for the
+actual contributor applying for themselves. Proxy applications and collection on
+another person's behalf are not accepted. Both mathematical and Lean contributions
+can be claimed in the same issue and are
+reviewed separately using the evidence already in the problem bank. Every claim
+must provide the problem-bank link, the original Lean proof repository URL and a
+follow-up contact email. The repository owner must match the issue author's GitHub
+account; mirrors or collections of someone else's proof do not qualify. The email
+will be public, so use an address intended for public correspondence. A contact
+email alone does not establish identity. Do not upload proof materials or repeat
+the catalog's branch, commit or theorem details; link a correction issue or PR if the
+catalog is missing information or needs updating. Read the [identity and payment process](docs/attribution.md#claiming-an-award).
+After identity verification and award confirmation, agree payment arrangements
+through the maintainer-designated private channel.
+Identity documents and private contact details are also handled privately.
+For mathematical solver claims, including claims for both roles, state an
+independently verifiable identity-confirmation method. A paper-listed author email is one option; established
+institutional or author channels, historical signing identities and other
+corroborated methods may also be used subject to maintainer verification.
+For Lean claims, maintainers check that the repository owner matches the issue
+author and that source attribution identifies the applicant as a formalization
+contributor. Ownership alone is not authorship. If that connection is missing or
+unclear, use the same independent identity-verification process as for mathematical
+solver claims. Lean-only applicants may leave the identity-verification-method
+field blank only when source attribution establishes that connection.
 
 ## Public records
 
@@ -21,7 +47,7 @@ Formal evidence references identify a pinned proof source, a statement tied to t
 
 Keep recipient identities as placeholders until confirmation. Announced awards require completed verification evidence, confirmed public profiles and explicit batch membership. A revocation retains the original decision, recipients and evidence alongside the published reason.
 
-Recommendations, corrections and disputes should receive a public response in their issue thread. [Discussions](docs/discussions-notice.md) is for general conversation. Refer to published announcements for any applicable submission requirements; these forms do not establish an assessment or appeals procedure.
+Recommendations, claims, corrections and disputes should receive a public response in their issue thread. [Discussions](docs/discussions-notice.md) is for general conversation. Refer to published announcements for any applicable submission requirements; these forms do not establish award entitlement or an appeals procedure.
 
 ## Pull requests
 
@@ -51,8 +77,11 @@ completeness before approving a PR.
 
 Use the default PR template and edit the relevant existing
 `problems/catalog-XXXX-XXXX.md` file. External PRs may update **Current status**
-(for mathematical solver credits), **Lean proof**, **Attribution basis**, and
-**Publication details**. Explain proposed status changes for maintainer review;
+(including mathematical solver credits), **Lean proof**, **Attribution basis**, and
+**Publication details**. Use only **Open** or **Solved** as the status; record
+complete-solution credits in the same **Current status** field after
+**Proof contributors:**. Do not add intermediate results or incomplete
+formalizations. Explain proposed status changes for maintainer review;
 maintainers reconcile index/status/eligibility fields after review. Use issues for
 other corrections or requests rather than changing unrelated repository files.
 
